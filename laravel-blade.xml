@@ -1,0 +1,135 @@
+<snippets namespace="" license="BSD" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" authors="github.com/Stolz" name="Laravel Blade">
+ <script></script>
+ <item>
+  <displayprefix></displayprefix>
+  <match>@include</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>@include('%{cursor}')</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>@render</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>@render('%{cursor}')</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>@yield</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>@yield('%{cursor}')</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>@yield-default</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>@yield('%{cursor}', 'default')</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>@section-layout</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>@section('%{section}')
+%{cursor}
+@show</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>@section-view</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>@section('%{section}')
+%{cursor}
+@stop</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>@section-view-parent</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>@section('%{section}')
+@parent
+%{cursor}
+@stop</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>blade</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>{{ %{cursor} }}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>blade-escaped</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>{{{ %{cursor} }}}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>@extends</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>@extends('%{cursor}')</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>@if</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>@if (%{cursor})
+
+@endif</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>@if-else</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>@if (%{cursor})
+
+@else
+
+@endif</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>@for</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>@for ($i = 0; $i &lt; 10; $i++)
+%{cursor}
+@endfor</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>@foreach</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>@foreach (%{cursor} as )
+
+@endforeach
+</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>@while</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>@while (%{cursor})
+
+@endwhile</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>@include-data</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>@include('%{cursor}', array('some'=>'data'))</fillin>
+ </item>
+</snippets>

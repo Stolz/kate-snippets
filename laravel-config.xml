@@ -1,0 +1,31 @@
+<snippets namespace="" license="BSD" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" authors="github.com/Stolz" name="Laravel Config">
+ <script></script>
+ <item>
+  <displayprefix></displayprefix>
+  <match>config-get</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Config::get('%{file}.%{item}');</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>config-get-fallback</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Config::get('%{file}.%{item}', %{cursor});</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>config-set</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Config::set('%{file}.%{item}', %{cursor});</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>config-has</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Config::has('%{file}.%{item}');</fillin>
+ </item>
+</snippets>
