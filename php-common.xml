@@ -1,0 +1,319 @@
+<snippets namespace="" license="GPL v2" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" authors="github.com/Stolz" name="PHP Common">
+ <script></script>
+ <item>
+  <displayprefix></displayprefix>
+  <match>class</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>class %{Class/./\u\0/} {
+	%{cursor}
+}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>constructor</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>/**
+ * Class constructor
+ *
+ * @return void
+ */
+public function __construct()
+{
+	%{cursor}
+}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>class+constructor</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>class %{Class/./\u\0/} {
+
+	/**
+	 * Class constructor
+	 *
+	 * @return void
+	 */
+	public function __construct()
+	{
+		%{cursor}
+	}
+}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>function</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>/**
+ * Function description
+ *
+ * @return void
+ */
+public function %{function_name}()
+{
+	%{cursor}
+}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>po</match>
+  <displaypostfix>&lt;?php</displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;?php</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>pp</match>
+  <displaypostfix>&lt;?= ?></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;?= %{cursor} ?></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>pc</match>
+  <displaypostfix>?></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>?></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>function-param</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>/**
+ * Function description
+ *
+ * @param  string
+ * @param  integer
+ * @param  bool
+ * @param  mixed
+ * @return void
+ */
+public function %{function_name}($param)
+{
+	%{cursor}
+}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>closure</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>function ()
+{
+	return %{cursor};
+}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>function</match>
+  <displaypostfix>closure</displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>function ()
+{
+	return %{cursor};
+}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>this</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>$this->%{cursor};</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>self</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>self::</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>if</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>if(%{cursor})
+{
+	
+}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>ifelse</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>if(%{cursor}})
+{
+	
+}
+else
+{
+	
+}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>else</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>else
+{
+	%{cursor}
+}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>elseif</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>elseif(%{cursor})
+{
+	
+}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>if</match>
+  <displaypostfix>(view)</displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;?php if(%{cursor}) : ?>
+
+&lt;?php endif ?></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>ifelse</match>
+  <displaypostfix>(view)</displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;?php if(%{cursor}) : ?>
+
+&lt;?php else : ?>
+
+&lt;?php endif ?></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>foreach</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>foreach($array as $key => $value)
+{
+	%{cursor}
+}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>foreach</match>
+  <displaypostfix>(view)</displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;?php foreach($array as $key => $value) : ?>
+%{cursor}
+&lt;?php endforeach ?></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>switch</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>switch(%{cursor})
+{
+	default:
+	case 1:
+		
+		break;
+}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>for</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>for($i = 1; $i &lt;= 10; $i++)
+{
+	%{cursor}
+}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>for</match>
+  <displaypostfix>(view)</displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;?php for($i = 1; $i &lt;= 10; $i++) : ?>
+%{cursor}
+&lt;?php endfor ?></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>while</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>while($i &lt;= 10)
+{
+	%{cursor}
+}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>while</match>
+  <displaypostfix>(view)</displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;?php while($i &lt;= 10) : ?>
+%{cursor}
+&lt;?php endfor ?></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>trycatch</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>try
+{
+	if(%{cursor})
+		throw new Exception(_('Error'));
+}
+catch(Exception $e)
+{
+	echo $e->getMessage();
+}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>trycatchfinally</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>try
+{
+	if(%{cursor})
+		throw new Exception(_('Error'));
+}
+catch(Exception $e)
+{
+	echo $e->getMessage();
+}
+finally
+{
+	
+}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>array</match>
+  <displaypostfix>(1 line)</displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>array(%{cursor})</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>array</match>
+  <displaypostfix>(multi line)
+</displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>array(
+	'%{cursor}'	=> 1,
+);</fillin>
+ </item>
+</snippets>
