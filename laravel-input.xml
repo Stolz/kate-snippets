@@ -1,0 +1,45 @@
+<snippets namespace="" license="GPL v2" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" authors="github.com/Stolz" name="Laravel Input">
+ <script></script>
+ <item>
+  <displayprefix></displayprefix>
+  <match>input-get</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Input::get('%{cursor}');</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>input-get-fallback</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Input::get('%{key}', %{cursor});</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>input-has</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Input::has('%{cursor}');</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>input-all</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Input::all();</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>input-only</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Input::only('input1', 'input2');</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>input-except</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Input::except('%{cursor}');</fillin>
+ </item>
+</snippets>

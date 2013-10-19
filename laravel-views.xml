@@ -1,4 +1,4 @@
-<snippets namespace="" license="BSD" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" authors="github.com/Stolz" name="Laravel Views">
+<snippets namespace="" license="GPL v2" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" authors="github.com/Stolz" name="Laravel Views">
  <script></script>
  <item>
   <displayprefix></displayprefix>
@@ -23,7 +23,7 @@
  </item>
  <item>
   <displayprefix></displayprefix>
-  <match>view-with-alt</match>
+  <match>view-with-dynamic</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
   <fillin>View::make('%{view}')->with%{var/./\u\0/}(%{cursor});</fillin>

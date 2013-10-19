@@ -1,0 +1,91 @@
+<snippets namespace="" license="GPL v2" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" authors="github.com/Stolz" name="Laravel Response">
+ <script></script>
+ <item>
+  <displayprefix></displayprefix>
+  <match>with</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>->with('%{var}', %{cursor});</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>with-dynamic</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>->with%{var/./\u\0/}(%{cursor});</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>with-input</match>
+  <displaypostfix>all</displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>->withInput();</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>with-input</match>
+  <displaypostfix>some</displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>->withInput($array);</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>with-errors</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>->withErrors($validator);</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>response-make</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>$response = Response::make('%{content}', $%{statuscode});</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>response-make-header</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>$response = Response::make('%{content}', $%{statuscode});
+
+$response->header('Content-Type', $value);
+
+return $response</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>response-json</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Response::json(%{cursor});</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>response-json-callback</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Response::json(%{cursor})->setCallback(Input::get('callback'));</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>response-download</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Response::download('path/to/remote_name.jpg');</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>response-download-name</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>esponse::download('path/to/remote_name.jpg', 'local_name.jpg');</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>response-download-name-header</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Response::download('path/to/remote_name.jpg', 'local_name.jpg', array('header key' => $header_value));</fillin>
+ </item>
+</snippets>
