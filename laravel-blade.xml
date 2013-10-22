@@ -75,7 +75,7 @@
   <match>@extends</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>@extends('%{cursor}')</fillin>
+  <fillin>@extends('layouts.%{cursor}')</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>

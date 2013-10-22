@@ -2,7 +2,7 @@
  <script></script>
  <item>
   <displayprefix></displayprefix>
-  <match>view</match>
+  <match>view-make</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
   <fillin>View::make('%{cursor}');</fillin>

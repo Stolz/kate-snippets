@@ -88,4 +88,11 @@ return $response</fillin>
   <displayarguments></displayarguments>
   <fillin>Response::download('path/to/remote_name.jpg', 'local_name.jpg', array('header key' => $header_value));</fillin>
  </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>response-view</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Response::view('view.file', array('view' => $parameters), $httpCode);</fillin>
+ </item>
 </snippets>
