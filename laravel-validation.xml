@@ -1,0 +1,74 @@
+<snippets namespace="" license="GPL v2" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" authors="github.com/Stolz" name="Laravel Validation">
+ <script></script>
+ <item>
+  <displayprefix></displayprefix>
+  <match>validator-make</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>$validator = Validator::make($input, $rules, $messages = array());</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>validator-set-attribute-names</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>$validator->setAttributeNames(array(
+	%{cursor}
+);
+</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>validator-fails</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>$validator->fails()</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>if-model-has-errors</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>if($model->hasErrors())</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>rule-all</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>/*
+accepted
+active_url
+after:YYYY-MM-DD
+before:YYYY-MM-DD
+alpha
+alpha_dash
+alpha_num
+between:1,10
+confirmed
+date
+date_format:YYYY-MM-DD
+different:fieldname
+email
+exists:table,column
+image
+in:foo,bar,baz
+not_in:foo,bar,baz
+integer
+numeric
+ip
+max:value
+min:value
+mimes:jpeg,png
+regex:/^[0-9]$/
+required
+required_if:field,value
+required_with:foo,bar,baz
+required_without:foo,bar,baz
+same:field
+size:value
+unique:table,column,except,idColumn
+url
+*/</fillin>
+ </item>
+</snippets>
