@@ -316,4 +316,11 @@ finally
 	'%{cursor}'	=> 1,
 );</fillin>
  </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>throw</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>throw new Exception(_('%{cursor}'));</fillin>
+ </item>
 </snippets>

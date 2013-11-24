@@ -1,0 +1,481 @@
+<snippets namespace="zf-" license="GPL v2" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" authors="github.com/Stolz github.com/zurb" name="Zurb Foundation 5">
+ <script></script>
+ <item>
+  <displayprefix></displayprefix>
+  <match>accordion</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;dl class="accordion" data-accordion>
+	&lt;dd>
+		&lt;a href="#panel1">Accordion 1&lt;/a>
+		&lt;div id="panel1" class="content active">
+		Panel 1 Content
+		&lt;/div>
+	&lt;/dd>
+	&lt;dd>
+		&lt;a href="#panel2">Accordion 2&lt;/a>
+		&lt;div id="panel2" class="content">
+		Panel 2 Content
+		&lt;/div>
+	&lt;/dd>
+	&lt;dd>
+		&lt;a href="#panel3">Accordion 3&lt;/a>
+		&lt;div id="panel3" class="content">
+		Panel 3 Content
+		&lt;/div>
+	&lt;/dd>
+&lt;/dl></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>alert</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;div data-alert class="alert-box">&lt;!-- to-do Optional classes: [success alert secondary] [radius round] -->
+	&lt;!-- to-do Your content goes here -->
+	&lt;a href="#" class="close">&amp;times;&lt;/a>
+&lt;/div></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>breadcrumb</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;ul class="breadcrumbs">
+	&lt;li>&lt;a href="#">Home&lt;/a>&lt;/li>
+	&lt;li>&lt;a href="#">Features&lt;/a>&lt;/li>
+	&lt;li class="unavailable">&lt;a href="#">Gene Splicing&lt;/a>&lt;/li>
+	&lt;li class="current">&lt;a href="#">Cloning&lt;/a>&lt;/li>
+&lt;/ul></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>button-bar</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;div class="button-bar">
+	&lt;ul class="button-group">
+	&lt;li>&lt;a href="#" class="button">Button 1&lt;/a>&lt;/li>&lt;!-- to-do Optional Classes: [radius round] [secondary alert success] [tiny small large] [disabled] -->
+		&lt;li>&lt;a href="#" class="button">Button 2&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="#" class="button">Button 3&lt;/a>&lt;/li>
+	&lt;/ul>
+	&lt;ul class="button-group">
+		&lt;li>&lt;a href="#" class="button">Button 1&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="#" class="button">Button 2&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="#" class="button">Button 3&lt;/a>&lt;/li>
+	&lt;/ul>
+&lt;/div></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>button-group</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;ul class="button-group">&lt;!-- to-do Optional Classes: [radius round] -->
+	&lt;li>&lt;a href="#" class="button">Button 1&lt;/a>&lt;/li>&lt;!-- to-do Optional Classes: [secondary alert success] [tiny small large] [disabled] -->
+	&lt;li>&lt;a href="#" class="button">Button 2&lt;/a>&lt;/li>
+	&lt;li>&lt;a href="#" class="button">Button 3&lt;/a>&lt;/li>
+&lt;/ul></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>button</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;a href="#" class="button">Default Button&lt;/a>&lt;!-- to-do Optional Classes: [radius round] [secondary alert success] [tiny small large] [disabled] -->
+</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>clearing</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;ul class="clearing-thumbs" data-clearing>
+	&lt;li>&lt;a href="path/to/your/img">&lt;img src="path/to/your/img-th">&lt;/a>&lt;/li>
+	&lt;li>&lt;a href="path/to/your/img">&lt;img src="path/to/your/img-th">&lt;/a>&lt;/li>
+	&lt;li>&lt;a href="path/to/your/img">&lt;img src="path/to/your/img-th">&lt;/a>&lt;/li>
+&lt;/ul></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>dropdown-button</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;a href="#" data-dropdown="drop" class="button dropdown">Dropdown Button&lt;/a>&lt;!-- to-do Optional Classes: [radius round] [secondary alert success] [tiny small large] [disabled] -->
+&lt;ul id="drop" data-dropdown-content class="f-dropdown">
+	&lt;li>&lt;a href="#">This is a link&lt;/a>&lt;/li>
+	&lt;li>&lt;a href="#">This is another&lt;/a>&lt;/li>
+	&lt;li>&lt;a href="#">Yet another&lt;/a>&lt;/li>
+&lt;/ul></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>grid-full</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;div class="row">
+	&lt;div class="small-12 medium-12 large-12 columns">&lt;/div>
+&lt;/div></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>grid-half</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;div class="row">
+	&lt;div class="small-6 medium-6 large-6 columns">&lt;/div>
+	&lt;div class="small-6 medium-6 large-6 columns">&lt;/div>
+&lt;/div></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>grid-third</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;div class="row">
+	&lt;div class="small-4 medium-4 large-4 columns">&lt;/div>
+	&lt;div class="small-4 medium-4 large-4 columns">&lt;/div>
+	&lt;div class="small-4 medium-4 large-4 columns">&lt;/div>
+&lt;/div></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>grid-quarter</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;div class="row">
+	&lt;div class="small-3 medium-3 large-3 columns">&lt;/div>
+	&lt;div class="small-3 medium-3 large-3 columns">&lt;/div>
+	&lt;div class="small-3 medium-3 large-3 columns">&lt;/div>
+	&lt;div class="small-3 medium-3 large-3 columns">&lt;/div>
+&lt;/div></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>reveal</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;a href="#" data-reveal-id="myModal">Click Me For A Modal&lt;/a>
+&lt;div id="myModal" class="reveal-modal" data-reveal>&lt;!-- to-do Size Classes: [small medium large xlarge expand] -->
+	&lt;h2>Awesome. I have it.&lt;/h2>
+	&lt;p class="lead">Your couch.  It is mine.&lt;/p>
+	&lt;p>Im a cool paragraph that lives inside of an even cooler modal. Wins&lt;/p>
+	&lt;a class="close-reveal-modal">&amp;#215;&lt;/a>
+&lt;/div></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>reveal-confirm</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;a href="#" data-reveal-id="myModal">Click Me For A Modal&lt;/a>
+&lt;div id="myModal" class="reveal-modal" style="padding-bottom:0" data-reveal>&lt;!-- to-do Size Classes: [small medium large xlarge expand] -->
+	&lt;h2>Awesome. I have it.&lt;/h2>
+	&lt;p class="lead">Your couch.  It is mine.&lt;/p>
+	&lt;p>Im a cool paragraph that lives inside of an even cooler modal. Wins&lt;/p>
+
+	&lt;div class="small-6 columns">
+			&lt;a id="delete-modal-close" class="secondary button radius expand">&lt;?= _('Cancel') ?>&lt;/a>
+	&lt;/div>
+
+	&lt;div class="small-6 columns">
+		&lt;a href="#" class="button radius expand">&lt;?= _('Confirm') ?>&lt;/a>
+	&lt;/div>
+
+	&lt;a class="close-reveal-modal">&amp;#215;&lt;/a>
+&lt;/div></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>offcanvas</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;div class="off-canvas-wrap">
+	&lt;div class="inner-wrap">
+		&lt;nav class="tab-bar">
+
+		&lt;section class="left-small">
+			&lt;a class="left-off-canvas-toggle menu-icon" >&lt;span>&lt;/span>&lt;/a>
+		&lt;/section>
+
+		&lt;section class="right tab-bar-section">
+			&lt;h1 class="title">Foundation&lt;/h1>
+		&lt;/section>
+
+		&lt;/nav>
+
+		&lt;!-- Off Canvas Menu -->
+		&lt;aside class="left-off-canvas-menu">
+		&lt;ul class="off-canvas-list">
+			&lt;li>&lt;label>Foundation&lt;/label>&lt;/li>
+			&lt;li>&lt;a href="#">The Psychohistorians&lt;/a>&lt;/li>
+			...
+		&lt;/ul>
+		&lt;/aside>
+
+		&lt;section class="main-section">
+		&lt;!-- content goes in here -->
+		&lt;/section>
+
+	&lt;!-- close the off-canvas menu -->
+	&lt;a class="exit-off-canvas">&lt;/a>
+
+	&lt;/div>
+&lt;/div></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>orbit-content</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;ul class="example-orbit-content" data-orbit>
+	&lt;li data-orbit-slide="headline-1">
+		&lt;div>
+		&lt;h2>Headline 1&lt;/h2>
+		&lt;h3>Subheadline&lt;/h3>
+		&lt;/div>
+	&lt;/li>
+	&lt;li data-orbit-slide="headline-2">
+		&lt;div>
+		&lt;h2>Headline 2&lt;/h2>
+		&lt;h3>Subheadline&lt;/h3>
+		&lt;/div>
+	&lt;/li>
+	&lt;li data-orbit-slide="headline-3">
+		&lt;div>
+		&lt;h2>Headline 3&lt;/h2>
+		&lt;h3>Subheadline&lt;/h3>
+		&lt;/div>
+	&lt;/li>
+&lt;/ul></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>orbit</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;ul class="example-orbit" data-orbit>
+	&lt;li>
+		&lt;img src="http://placehold.it/1000x300/A92B48/fff" alt="slide 1" />
+		&lt;div class="orbit-caption">
+		Caption One.
+		&lt;/div>
+	&lt;/li>
+	&lt;li>
+		&lt;img src="http://placehold.it/1000x300/EE964D/fff" alt="slide 2" />
+		&lt;div class="orbit-caption">
+		Caption Two.
+		&lt;/div>
+	&lt;/li>
+	&lt;li>
+		&lt;img src="http://placehold.it/1000x300/FDC43D/fff" alt="slide 3" />
+		&lt;div class="orbit-caption">
+		Caption Three.
+		&lt;/div>
+	&lt;/li>
+&lt;/ul></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>pagination</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;ul class="pagination">
+	&lt;li class="arrow unavailable">&lt;a href="">&amp;laquo;&lt;/a>&lt;/li>
+	&lt;li class="current">&lt;a href="">1&lt;/a>&lt;/li>
+	&lt;li>&lt;a href="">2&lt;/a>&lt;/li>
+	&lt;li>&lt;a href="">3&lt;/a>&lt;/li>
+	&lt;li>&lt;a href="">4&lt;/a>&lt;/li>
+	&lt;li class="unavailable">&lt;a href="">&amp;hellip;&lt;/a>&lt;/li>
+	&lt;li>&lt;a href="">12&lt;/a>&lt;/li>
+	&lt;li>&lt;a href="">13&lt;/a>&lt;/li>
+	&lt;li class="arrow">&lt;a href="">&amp;raquo;&lt;/a>&lt;/li>
+&lt;/ul></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>pagination-centered</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;div class="pagination-centered">
+	&lt;ul class="pagination">
+		&lt;li class="arrow unavailable">&lt;a href="">&amp;laquo;&lt;/a>&lt;/li>
+		&lt;li class="current">&lt;a href="">1&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="">2&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="">3&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="">4&lt;/a>&lt;/li>
+		&lt;li class="unavailable">&lt;a href="">&amp;hellip;&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="">12&lt;/a>&lt;/li>
+		&lt;li>&lt;a href="">13&lt;/a>&lt;/li>
+		&lt;li class="arrow">&lt;a href="">&amp;raquo;&lt;/a>&lt;/li>
+	&lt;/ul>
+&lt;/div></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>panel</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;div class="panel">&lt;!-- to-do Optional Classes: [callout radius] -->
+	&lt;h5>This is a callout panel.&lt;/h5>
+	&lt;p>It's a little ostentatious, but useful for important content.&lt;/p>
+&lt;/div></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>pricing-table</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;ul class="pricing-table">
+	&lt;li class="title">Standard&lt;/li>
+	&lt;li class="price">$99.99&lt;/li>
+	&lt;li class="description">An awesome description&lt;/li>
+	&lt;li class="bullet-item">1 Database&lt;/li>
+	&lt;li class="bullet-item">5GB Storage&lt;/li>
+	&lt;li class="bullet-item">20 Users&lt;/li>
+	&lt;li class="cta-button">&lt;a class="button" href="#">Buy Now&lt;/a>&lt;/li>
+&lt;/ul></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>progress-bar</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;!-- to-do
+Container Width Classes: [small-# large-#]
+Color Classes: [secondary alert success]
+Radius Classes: [radius round]
+Progress Width Classes: [1 - 100] -->
+&lt;div class="progress">
+	&lt;span class="meter" style="width: 100%">&lt;/span>
+&lt;/div></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>sidenav</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;ul class="side-nav">
+	&lt;li class="active">&lt;a href="#">Link 1&lt;/a>&lt;/li>
+	&lt;li>&lt;a href="#">Link 2&lt;/a>&lt;/li>
+	&lt;li class="divider">&lt;/li>
+	&lt;li>&lt;a href="#">Link 3&lt;/a>&lt;/li>
+	&lt;li>&lt;a href="#">Link 4&lt;/a>&lt;/li>
+&lt;/ul></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>split-button</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;a href="#" class="button split">Split Button &lt;span data-dropdown="drop">&lt;/span>&lt;/a> &lt;!-- to-do Optional Classes: [radius round] [tiny small medium large] [secondary alert success] -->
+&lt;br/>
+&lt;ul id="drop" class="f-dropdown" data-dropdown-content>
+	&lt;li>&lt;a href="#">This is a link&lt;/a>&lt;/li>
+	&lt;li>&lt;a href="#">This is another&lt;/a>&lt;/li>
+	&lt;li>&lt;a href="#">Yet another&lt;/a>&lt;/li>
+&lt;/ul></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>subnav</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;dl class="sub-nav">
+	&lt;dt>Filter:&lt;/dt>
+	&lt;dd class="active">&lt;a href="#">All&lt;/a>&lt;/dd>
+	&lt;dd>&lt;a href="#">Active&lt;/a>&lt;/dd>
+	&lt;dd>&lt;a href="#">Pending&lt;/a>&lt;/dd>
+	&lt;dd>&lt;a href="#">Suspended&lt;/a>&lt;/dd>
+&lt;/dl></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>tab</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;dl class="tabs" data-tab>
+	&lt;dd class="active">&lt;a href="#panel1">Tab 1&lt;/a>&lt;/dd>
+	&lt;dd>&lt;a href="#panel2">Tab 2&lt;/a>&lt;/dd>
+	&lt;dd>&lt;a href="#panel3">Tab 3&lt;/a>&lt;/dd>
+	&lt;dd>&lt;a href="#panel4">Tab 4&lt;/a>&lt;/dd>
+&lt;/dl>
+&lt;div class="tabs-content">
+	&lt;div class="content active" id="panel1">
+		&lt;p>This is the first panel of the basic tab example. This is the first panel of the basic tab example.&lt;/p>
+	&lt;/div>
+	&lt;div class="content" id="panel2">
+		&lt;p>This is the second panel of the basic tab example. This is the second panel of the basic tab example.&lt;/p>
+	&lt;/div>
+	&lt;div class="content" id="panel3">
+		&lt;p>This is the third panel of the basic tab example. This is the third panel of the basic tab example.&lt;/p>
+	&lt;/div>
+	&lt;div class="content" id="panel4">
+		&lt;p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab example.&lt;/p>
+	&lt;/div>
+&lt;/div></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>topbar</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;div class="fixed contain-to-grid">
+	&lt;nav class="top-bar" data-topbar>
+		&lt;ul class="title-area">
+			&lt;li class="name">
+				&lt;h1>&lt;a href="#">My Site&lt;/a>&lt;/h1>
+			&lt;/li>
+		&lt;/ul>
+
+		&lt;section class="top-bar-section">
+
+			&lt;!-- Right Nav Section -->
+			&lt;ul class="right">
+				&lt;li class="active">&lt;a href="#">Right Nav Button Active&lt;/a>&lt;/li>
+				&lt;li class="has-dropdown">
+					&lt;a href="#">Right Button with Dropdown&lt;/a>
+					&lt;ul class="dropdown">
+						&lt;li>&lt;label>Foo label&lt;/label>&lt;/li>
+						&lt;li>&lt;a href="#">First link in dropdown&lt;/a>&lt;/li>
+						&lt;li class="divider">&lt;/li>
+						&lt;li>&lt;a href="#">Second link in dropdown&lt;/a>&lt;/li>
+					&lt;/ul>
+				&lt;/li>
+			&lt;/ul>
+
+			&lt;!-- Left Nav Section -->
+			&lt;ul class="left">
+				&lt;li>&lt;a href="#">Left Nav Button&lt;/a>&lt;/li>
+			&lt;/ul>
+		&lt;/section>
+	&lt;/nav>
+&lt;/div></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>vertical-tab</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;dl class="tabs vertical" data-tab>
+	&lt;dd class="active">&lt;a href="#panel1a">Tab 1&lt;/a>&lt;/dd>
+	&lt;dd>&lt;a href="#panel2a">Tab 2&lt;/a>&lt;/dd>
+	&lt;dd>&lt;a href="#panel3a">Tab 3&lt;/a>&lt;/dd>
+	&lt;dd>&lt;a href="#panel4a">Tab 4&lt;/a>&lt;/dd>
+&lt;/dl>
+&lt;div class="tabs-content vertical">
+	&lt;div class="content active" id="panel1a">
+		&lt;p>Panel 1.&lt;/p>
+	&lt;/div>
+	&lt;div class="content" id="panel2a">
+		&lt;p>Panel 2.&lt;/p>
+	&lt;/div>
+	&lt;div class="content" id="panel3a">
+		&lt;p>Panel 3.&lt;/p>
+	&lt;/div>
+	&lt;div class="content" id="panel4a">
+		&lt;p>Panel 4.&lt;/p>
+	&lt;/div>
+&lt;/div></fillin>
+ </item>
+</snippets>
