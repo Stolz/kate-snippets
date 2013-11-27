@@ -36,8 +36,7 @@
   <match>rule-all</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>/*
-accepted
+  <fillin>accepted
 active_url
 after:YYYY-MM-DD
 before:YYYY-MM-DD
@@ -69,6 +68,14 @@ same:field
 size:value
 unique:table,column,except,idColumn
 url
-*/</fillin>
+====== Custom ===================
+alpha_space
+alpha_dash_space
+alpha_num_space
+positive
+length
+max_length
+min_length
+</fillin>
  </item>
 </snippets>
