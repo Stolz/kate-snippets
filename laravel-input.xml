@@ -42,4 +42,11 @@
   <displayarguments></displayarguments>
   <fillin>Input::except('%{cursor}');</fillin>
  </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>input-merge</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Input::merge(%{cursor});</fillin>
+ </item>
 </snippets>
