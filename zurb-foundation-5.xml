@@ -6,13 +6,13 @@
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
   <fillin>&lt;dl class="accordion" data-accordion>
-	&lt;dd>
+	&lt;dd class="accordion-navigation">
 		&lt;a href="#panel1">Accordion 1&lt;/a>
 		&lt;div id="panel1" class="content active">
 		Panel 1 Content
 		&lt;/div>
 	&lt;/dd>
-	&lt;dd>
+	&lt;dd class="accordion-navigation">
 		&lt;a href="#panel2">Accordion 2&lt;/a>
 		&lt;div id="panel2" class="content">
 		Panel 2 Content
