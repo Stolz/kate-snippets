@@ -479,4 +479,58 @@ Progress Width Classes: [1 - 100] -->
 	&lt;/div>
 &lt;/div></fillin>
  </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>iconbar-horizontal</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;div class="icon-bar four-up">
+	&lt;a class="item">
+		&lt;img src="http://foundation.zurb.com/docs/assets/img/images/fi-home.svg" alt="">
+		&lt;label>Home&lt;/label>
+	&lt;/a>
+	
+	&lt;a class="item">
+		&lt;img src="http://foundation.zurb.com/docs/assets/img/images/fi-bookmark.svg" alt="">
+		&lt;label>Bookmark&lt;/label>
+	&lt;/a>
+	
+	&lt;a class="item">
+		&lt;img src=".http://foundation.zurb.com/docs/assets/img/images/fi-info.svg" alt="">
+		&lt;label>Info&lt;/label>
+	&lt;/a>
+	
+	&lt;a class="item">
+		&lt;img src="http://foundation.zurb.com/docs/assets/img/images/fi-mail.svg" alt="">
+		&lt;label>Mail&lt;/label>
+	&lt;/a>
+&lt;/div></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>iconbar-vertical</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;div class="icon-bar vertical four-up">
+	&lt;a class="item">
+		&lt;img src="http://foundation.zurb.com/docs/assets/img/images/fi-home.svg" alt="">
+		&lt;label>Home&lt;/label>
+	&lt;/a>
+
+	&lt;a class="item">
+		&lt;img src="http://foundation.zurb.com/docs/assets/img/images/fi-bookmark.svg" alt="">
+		&lt;label>Bookmark&lt;/label>
+	&lt;/a>
+
+	&lt;a class="item">
+		&lt;img src=".http://foundation.zurb.com/docs/assets/img/images/fi-info.svg" alt="">
+		&lt;label>Info&lt;/label>
+	&lt;/a>
+
+	&lt;a class="item">
+		&lt;img src="http://foundation.zurb.com/docs/assets/img/images/fi-mail.svg" alt="">
+		&lt;label>Mail&lt;/label>
+	&lt;/a>
+&lt;/div></fillin>
+ </item>
 </snippets>
