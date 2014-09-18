@@ -426,7 +426,7 @@ Progress Width Classes: [1 - 100] -->
 			&lt;li class="name">
 				&lt;h1>&lt;a href="#">My Site&lt;/a>&lt;/h1>
 			&lt;/li>
-			&lt;li class="toggle-topbar menu-icon">&lt;a href="#">Menu&lt;/a>&lt;/li>
+			&lt;li class="toggle-topbar menu-icon">&lt;a href="#">&lt;span>Menu&lt;/span>&lt;/a>&lt;/li>
 		&lt;/ul>
 
 		&lt;section class="top-bar-section">
