@@ -533,4 +533,18 @@ Progress Width Classes: [1 - 100] -->
 	&lt;/a>
 &lt;/div></fillin>
  </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>equalizer</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;div class="row" data-equalizer>
+	&lt;div class="large-6 columns panel" data-equalizer-watch>
+		
+	&lt;/div>
+	&lt;div class="large-6 columns panel" data-equalizer-watch>
+		
+	&lt;/div>
+&lt;/div></fillin>
+ </item>
 </snippets>
