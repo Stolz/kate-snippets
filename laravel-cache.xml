@@ -1,0 +1,143 @@
+<snippets namespace="" license="LGPL v2+" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" authors="github.com/Stolz" name="Laravel Cache">
+ <script></script>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cache-remember</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Cache::remember('key', $minutes, function() {
+	return 'value';
+})</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cache-remember-forever</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Cache::rememberForever('key', function() {
+	return 'value';
+})
+</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cache-add</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Cache::put('key', 'value', $minutes);</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cache-add-carbon</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Cache::put('key', 'value', Carbon::now()->addMinutes(10))</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cache-add-if-doesnt-exist</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Cache::add('key', 'value', $minutes)</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cache-add-forever</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Cache::forever('key', 'value')</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cache-has</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Cache::has('key')</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cache-get</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Cache::get('key')</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cache-get-fallback</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Cache::get('key', $defaultIfNotFound)</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cache-get-fallback-closure</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Cache::get('key', function() {
+	return 'default';
+})</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cache-get-and-delete</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Cache::pull('key')</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cache-forget</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Cache::forget('key')</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cache-increment-one</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Cache::increment('key')</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cache-increment-amount</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Cache::increment('key', $amount)</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cache-decrement-one</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Cache::decrement('key')</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cache-decrement-amount</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Cache::decrement('key', $amount)</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cache-tag</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Cache::tags('tag1', 'tag')-></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cache-tag-array</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Cache::tags(['tag1', 'tag2'])-></fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>cache-tag-flush</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>Cache::tags('tag1', 'tag2')->flush()</fillin>
+ </item>
+</snippets>
