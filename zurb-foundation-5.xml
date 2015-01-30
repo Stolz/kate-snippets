@@ -190,7 +190,7 @@
   <match>offcanvas</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>&lt;div class="off-canvas-wrap">
+  <fillin>&lt;div class="off-canvas-wrap" data-offcanvas>
 	&lt;div class="inner-wrap">
 		&lt;nav class="tab-bar">
 
