@@ -1,0 +1,64 @@
+<snippets namespace="" license="GPL v2" filetypes="PHP/PHP;PHP (HTML)" authors="github.com/Stolz" name="Laravel Relationships">
+ <script></script>
+ <item>
+  <displayprefix></displayprefix>
+  <match>rel-1-1-without-foreign</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>public function %{model}()
+{
+	return $this->hasOne('App\\%{model/./\u\0/}');
+}%{cursor}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>rel-1-1-with-foreign</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>public function %{model}()
+{
+	return $this->belongsTo('App\\%{model/./\u\0/}');
+}%{cursor}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>rel-1-N</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>public function %{model}s()
+{
+	return $this->hasMany('App\\%{model/./\u\0/}');
+}%{cursor}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>rel-N-1</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>public function %{model}()
+{
+	return $this->belongsTo('App\\%{model/./\u\0/}');
+}%{cursor}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>rel-N-M</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>public function %{model}s()
+{
+	return $this->belongsToMany('App\\%{model/./\u\0/}')->withPivot('foo', 'bar')->withTimestamps();
+}%{cursor}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>rel-many-through</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>public function %{model}s()
+{
+	return $this->hasManyThrough('App\\%{model/./\u\0/}', 'App\\%{through/./\u\0/}');
+}%{cursor}
+</fillin>
+ </item>
+</snippets>
