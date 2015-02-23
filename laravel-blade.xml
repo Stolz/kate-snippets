@@ -58,6 +58,15 @@
  </item>
  <item>
   <displayprefix></displayprefix>
+  <match>@section-view-overwrite</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>@section('%{section}')
+%{cursor}
+@overwrite</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
   <match>blade</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
