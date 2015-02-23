@@ -2,43 +2,47 @@
  <script></script>
  <item>
   <displayprefix></displayprefix>
-  <match>rel-1-1-without-foreign</match>
+  <match>rel-1-1</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
   <fillin>public function %{model}()
 {
 	return $this->hasOne('App\\%{model/./\u\0/}');
-}%{cursor}</fillin>
+}
+%{cursor}</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>
-  <match>rel-1-1-with-foreign</match>
+  <match>rel-1-1-has-foreign</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
   <fillin>public function %{model}()
 {
 	return $this->belongsTo('App\\%{model/./\u\0/}');
-}%{cursor}</fillin>
+}
+%{cursor}</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>
-  <match>rel-1-N</match>
+  <match>rel-1-N-one</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>public function %{model}()
+{
+	return $this->belongsTo('App\\%{model/./\u\0/}');
+}
+%{cursor}</fillin>
+ </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>rel-1-N-many</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
   <fillin>public function %{model}s()
 {
 	return $this->hasMany('App\\%{model/./\u\0/}');
-}%{cursor}</fillin>
- </item>
- <item>
-  <displayprefix></displayprefix>
-  <match>rel-N-1</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>public function %{model}()
-{
-	return $this->belongsTo('App\\%{model/./\u\0/}');
-}%{cursor}</fillin>
+}
+%{cursor}</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>
@@ -47,8 +51,9 @@
   <displayarguments></displayarguments>
   <fillin>public function %{model}s()
 {
-	return $this->belongsToMany('App\\%{model/./\u\0/}')->withPivot('foo', 'bar')->withTimestamps();
-}%{cursor}</fillin>
+	return $this->belongsToMany('App\\%{model/./\u\0/}')%{cursor}->withPivot('foo', 'bar')->withTimestamps();
+}
+</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>
@@ -58,7 +63,8 @@
   <fillin>public function %{model}s()
 {
 	return $this->hasManyThrough('App\\%{model/./\u\0/}', 'App\\%{through/./\u\0/}');
-}%{cursor}
+}
+%{cursor}
 </fillin>
  </item>
 </snippets>
