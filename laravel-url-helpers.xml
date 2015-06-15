@@ -26,7 +26,7 @@
   <match>link-to-route</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>link_to_route('%{name}', $%{title}, $parameters, $attributes)</fillin>
+  <fillin>link_to_route('%{name}', $%{title}, [$unamedParameter, 'namedParameter' => $namedParameter], ['id' => 'foo', 'class' => 'bar'])</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>
@@ -47,7 +47,7 @@
   <match>route-url</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>route($route, $parameters, $absolute = true)</fillin>
+  <fillin>route($route, [$unamedParameter, 'namedParameter' => $namedParameter], $absolute = true)</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>
