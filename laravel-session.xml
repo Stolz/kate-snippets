@@ -75,6 +75,6 @@
   <match>session-keep</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>Session::keep(array('%{cursor}'))</fillin>
+  <fillin>Session::keep(['%{cursor}'])</fillin>
  </item>
 </snippets>

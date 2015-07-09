@@ -12,7 +12,7 @@
   <match>view-param</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>View::make('%{view}', array('%{var}' => %{cursor}));</fillin>
+  <fillin>View::make('%{view}', ['%{var}' => %{cursor}]);</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>

@@ -68,6 +68,6 @@
   <match>url</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>url('path', $parameters = array(), $secure = null)</fillin>
+  <fillin>url('path', $parameters = [], $secure = null)</fillin>
  </item>
 </snippets>

@@ -14,9 +14,9 @@
   <match>route-name</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>Route::%{verb}('%{url}', array('as' => '%{name}', function() {
+  <fillin>Route::%{verb}('%{url}', ['as' => '%{name}', function() {
 	%{cursor}
-}));
+}]);
 </fillin>
  </item>
  <item>
@@ -71,7 +71,7 @@
   <displayarguments></displayarguments>
   <fillin>Route::%{verb}('%{url}/{%{integer}}/{%{string}}', function($%{integer}, $%{string}) {
 	return %{cursor};
-})->where(array('%{integer}' => '[0-9]+', '%{string}' => '[A-Za-z]+'));</fillin>
+})->where(['%{integer}' => '[0-9]+', '%{string}' => '[A-Za-z]+']);</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>
@@ -94,14 +94,14 @@
   <match>route-controller-name</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>Route::%{verb}('%{url}', array('as' => '%{name}', 'uses' => '%{controller}Controller@%{action}'));</fillin>
+  <fillin>Route::%{verb}('%{url}', ['as' => '%{name}', 'uses' => '%{controller}Controller@%{action}']);</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>
   <match>route-controller-array</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>Route::%{verb}('%{url}', array('uses' => '%{controller}Controller@%{action}'));</fillin>
+  <fillin>Route::%{verb}('%{url}', ['uses' => '%{controller}Controller@%{action}']);</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>
@@ -119,36 +119,36 @@
  </item>
  <item>
   <displayprefix></displayprefix>
-  <match>route-filter</match>
+  <match>route-middleware</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>Route::%{verb}('%{url}', array(
-	'before' => '%{filter}',
+  <fillin>Route::%{verb}('%{url}', [
+	'middleware' => '%{name:parameter}',
 	function() {
 		return %{cursor};
 	}
-));</fillin>
+]);</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>
-  <match>route-filter-wildcard</match>
+  <match>route-middleware-wildcard</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>Route::when('%{url}/*', '%{filter}');</fillin>
+  <fillin>Route::when('%{url}/*', '%{middleware}');</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>
-  <match>route-filter-wildcard-restrict-method</match>
+  <match>route-middleware-wildcard-restrict-method</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>Route::when('%{url}/*', '%{filter}', array(%{cursor}/* 'get', 'post', 'put', 'delete' */));</fillin>
+  <fillin>Route::when('%{url}/*', '%{middleware}', [%{cursor}/* 'get', 'post', 'put', 'delete' */]);</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>
   <match>route-group</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>Route::group(array('before' => '%{filter}'), function() {
+  <fillin>Route::group(['middleware' => '%{middleware}'], function() {
 	%{cursor}
 });</fillin>
  </item>
@@ -157,7 +157,7 @@
   <match>route-group-domain</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>Route::group(array('domain' => '{subdomain}.myapp.com'), function() {
+  <fillin>Route::group(['domain' => '{subdomain}.myapp.com'], function() {
 	%{cursor}
 });</fillin>
  </item>
@@ -166,8 +166,7 @@
   <match>route-group-prefix</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>Route::group(array('prefix' => '%{prefix}'), function()
-{
+  <fillin>Route::group(['prefix' => '%{prefix}'], function() {
 	%{cursor}
 });</fillin>
  </item>
@@ -183,7 +182,7 @@
   <match>route-resource-only</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>Route::resource('%{url}', '%{controller}Controller', array('only' => array(%{cursor}/*'index', 'create', 'store', 'show', 'edit', 'update', 'destroy' */)));
+  <fillin>Route::resource('%{url}', '%{controller}Controller', ['only' => [%{cursor}/*'index', 'create', 'store', 'show', 'edit', 'update', 'destroy' */]]);
 </fillin>
  </item>
  <item>
@@ -191,7 +190,7 @@
   <match>route-resource-except</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>Route::resource('%{url}', '%{controller}Controller', array('except' => array(%{cursor}/*'index', 'create', 'store', 'show', 'edit', 'update', 'destroy' */)));
+  <fillin>Route::resource('%{url}', '%{controller}Controller', ['except' => [%{cursor}/*'index', 'create', 'store', 'show', 'edit', 'update', 'destroy' */]);
 </fillin>
  </item>
  <item>
@@ -199,9 +198,9 @@
   <match>route-https-forced</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>Route::%{verb}('%{url}', array('https', function() {
+  <fillin>Route::%{verb}('%{url}', ['https', function() {
 	%{cursor}
-}));</fillin>
+}]);</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>

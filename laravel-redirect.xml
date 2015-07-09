@@ -89,14 +89,14 @@
   <match>redirect-route-param</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>Redirect::route('%{route}', array(%{cursor}));</fillin>
+  <fillin>Redirect::route('%{route}', [%{cursor}]);</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>
   <match>redirect-route-param-named</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>Redirect::route('%{route}', array('key' => 'value'));</fillin>
+  <fillin>Redirect::route('%{route}', ['key' => 'value']);</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>
@@ -110,14 +110,14 @@
   <match>redirect-action-param</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>Redirect::action('%{name}Controller@%{action}', array(%{cursor}));</fillin>
+  <fillin>Redirect::action('%{name}Controller@%{action}', [%{cursor}]);</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>
   <match>redirect-action-param-named</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>Redirect::action('%{name}Controller@%{action}', array('key' => 'value'));</fillin>
+  <fillin>Redirect::action('%{name}Controller@%{action}', ['key' => 'value']);</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>

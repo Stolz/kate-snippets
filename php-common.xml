@@ -304,7 +304,7 @@ finally
   <match>array</match>
   <displaypostfix>(1 line)</displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>array(%{cursor})</fillin>
+  <fillin>[%{cursor}]</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>
@@ -312,9 +312,9 @@ finally
   <displaypostfix>(multi line)
 </displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>array(
+  <fillin>[
 	'%{cursor}'	=> 1,
-);</fillin>
+];</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>

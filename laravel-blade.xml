@@ -139,6 +139,6 @@
   <match>@include-data</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>@include('%{cursor}', array('some'=>'data'))</fillin>
+  <fillin>@include('%{cursor}', ['some'=>'data'])</fillin>
  </item>
 </snippets>

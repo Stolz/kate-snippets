@@ -5,16 +5,16 @@
   <match>validator-make</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>$validator = Validator::make($input, $rules, $messages = array());</fillin>
+  <fillin>$validator = Validator::make($input, $rules, $messages = []));</fillin>
  </item>
  <item>
   <displayprefix></displayprefix>
   <match>validator-set-attribute-names</match>
   <displaypostfix></displaypostfix>
   <displayarguments></displayarguments>
-  <fillin>$validator->setAttributeNames(array(
+  <fillin>$validator->setAttributeNames([
 	%{cursor}
-);
+]);
 </fillin>
  </item>
  <item>
