@@ -547,4 +547,14 @@ Progress Width Classes: [1 - 100] -->
 	&lt;/div>
 &lt;/div></fillin>
  </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>block-grid</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>&lt;ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+	&lt;li>&lt;!-- Your content goes here -->&lt;/li>
+&lt;/ul>
+</fillin>
+ </item>
 </snippets>
