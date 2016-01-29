@@ -56,4 +56,11 @@
   <displayarguments></displayarguments>
   <fillin>storage_path()</fillin>
  </item>
+ <item>
+  <displayprefix></displayprefix>
+  <match>database-path</match>
+  <displaypostfix></displaypostfix>
+  <displayarguments></displayarguments>
+  <fillin>database_path()</fillin>
+ </item>
 </snippets>

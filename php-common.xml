@@ -272,12 +272,12 @@ else
   <displayarguments></displayarguments>
   <fillin>try
 {
-	if(%{cursor})
-		throw new Exception(_('Error'));
+    if(%{cursor})
+        throw new Exception(_('Error'));
 }
-catch(Exception $e)
+catch(Exception $exception)
 {
-	echo $e->getMessage();
+    echo $exception->getMessage();
 }</fillin>
  </item>
  <item>
@@ -287,16 +287,16 @@ catch(Exception $e)
   <displayarguments></displayarguments>
   <fillin>try
 {
-	if(%{cursor})
-		throw new Exception(_('Error'));
+    if(%{cursor})
+        throw new Exception(_('Error'));
 }
-catch(Exception $e)
+catch(Exception $exception)
 {
-	echo $e->getMessage();
+    echo $exception->getMessage();
 }
 finally
 {
-	
+    
 }</fillin>
  </item>
  <item>
