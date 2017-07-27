@@ -11,7 +11,7 @@ path="`readlink -f $1`"
 
 [ -f "$path" ] || die "$path File not found!"
 
-kde="$HOME/.kde4/share/apps/ktexteditor_snippets/data"
+kde="$HOME/.local/share/ktexteditor_snippets/data"
 
 [ -d "$kde" ] || die "$kde Directory not found!"
 
