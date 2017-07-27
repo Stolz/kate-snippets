@@ -1,0 +1,8 @@
+/* https://docs.kde.org/stable5/en/applications/konsole/tabbarstylsheet.html */
+QTabBar::tab {
+    background: #2E373C
+}
+QTabBar::tab:selected {
+    background: #595A5A
+}
+
