@@ -1,9 +1,9 @@
-<snippets filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" license="GPL v2" namespace="" authors="github.com/Stolz" name="PHP Common">
+<snippets filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" namespace="" name="PHP Common" authors="github.com/Stolz" license="GPL v2">
  <script></script>
  <item>
   <match>class</match>
-  <fillin>class ${Class/./\u\0/} {
-	${cursor}
+  <fillin>class ${name} {
+    ${cursor}
 }</fillin>
  </item>
  <item>
@@ -15,34 +15,34 @@
  */
 public function __construct()
 {
-	${cursor}
+    ${cursor}
 }</fillin>
  </item>
  <item>
   <match>class+constructor</match>
-  <fillin>class ${Class/./\u\0/} {
+  <fillin>class ${name} {
 
-	/**
-	 * Class constructor
-	 *
-	 * @return void
-	 */
-	public function __construct()
-	{
-		${cursor}
-	}
+    /**
+     * Class constructor
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        ${cursor}
+    }
 }</fillin>
  </item>
  <item>
-  <match>function</match>
+  <match>function-doc</match>
   <fillin>/**
  * Function description
  *
- * @return void
+ * @return TODO
  */
-public function ${function_name}()
+public function ${name}(): TODO
 {
-	${cursor}
+    return ${cursor};
 }</fillin>
  </item>
  <item>
@@ -51,28 +51,28 @@ public function ${function_name}()
  * Function description
  *
  * @param  string
- * @param  integer
+ * @param  int
  * @param  bool
  * @param  mixed
- * @return void
+ * @return TODO
  */
-public function ${function_name}($param)
+public function ${name}($param): TODO
 {
-	${cursor}
-}</fillin>
+    return ${cursor};
+}
+</fillin>
  </item>
  <item>
   <match>closure</match>
-  <fillin>function ()
-{
-	return ${cursor};
+  <fillin>function () {
+    return ${cursor};
 }</fillin>
  </item>
  <item>
   <match>function</match>
-  <fillin>function ()
+  <fillin>function ${name} (): TODO
 {
-	return ${cursor};
+    return ${cursor};
 }</fillin>
  </item>
  <item>
@@ -81,107 +81,89 @@ public function ${function_name}($param)
  </item>
  <item>
   <match>if</match>
-  <fillin>if(${cursor})
-{
+  <fillin>if (${cursor}) {
 
 }</fillin>
  </item>
  <item>
   <match>ifelse</match>
-  <fillin>if(${cursor}})
-{
+  <fillin>if (${cursor}}) {
 
-}
-else
-{
+} else {
 
 }</fillin>
  </item>
  <item>
   <match>else</match>
-  <fillin>else
-{
-	${cursor}
+  <fillin>else {
+    ${cursor}
 }</fillin>
  </item>
  <item>
   <match>elseif</match>
-  <fillin>elseif(${cursor})
-{
+  <fillin>elseif (${cursor}) {
 
 }</fillin>
  </item>
  <item>
   <match>foreach</match>
-  <fillin>foreach($array as $key => $value)
-{
-	${cursor}
+  <fillin>foreach ($array as $key => $value) {
+    ${cursor}
 }</fillin>
  </item>
  <item>
   <match>switch</match>
-  <fillin>switch(${cursor})
-{
-	default:
-	case 1:
+  <fillin>switch (${cursor}) {
+    default:
+    case 1:
 
-		break;
+        break;
 }</fillin>
  </item>
  <item>
   <match>for</match>
-  <fillin>for($i = 1; $i &lt;= 10; $i++)
-{
-	${cursor}
+  <fillin>for ($i = 1; $i &lt;= 10; $i++) {
+    ${cursor}
 }</fillin>
  </item>
  <item>
   <match>while</match>
-  <fillin>while($i &lt;= 10)
-{
-	${cursor}
+  <fillin>while ($i &lt;= 10) {
+    ${cursor}
 }</fillin>
  </item>
  <item>
   <match>trycatch</match>
-  <fillin>try
-{
-    if(${cursor})
-        throw new Exception(_('Error'));
-}
-catch(Exception $exception)
-{
+  <fillin>try {
+    if (${cursor})
+        throw new Exception('TODO');
+} catch(Exception $exception) {
     echo $exception->getMessage();
 }</fillin>
  </item>
  <item>
   <match>trycatchfinally</match>
-  <fillin>try
-{
-    if(${cursor})
-        throw new Exception(_('Error'));
-}
-catch(Exception $exception)
-{
+  <fillin>try {
+    if (${cursor})
+        throw new Exception('TODO');
+} catch(Exception $exception) {
     echo $exception->getMessage();
-}
-finally
-{
+} finally {
 
 }</fillin>
  </item>
  <item>
   <match>array</match>
-  <fillin>[${cursor}]</fillin>
- </item>
- <item>
-  <match>array</match>
   <fillin>[
-	'${cursor}'	=> 1,
+    '${cursor}' => 1,
 ];</fillin>
  </item>
  <item>
   <match>throw</match>
-  <fillin>throw new Exception(_('${cursor}'));</fillin>
+  <fillin>throw new Exception('${cursor}');</fillin>
+ </item>
+ <item>
+  <match>static</match>
+  <fillin>static::</fillin>
  </item>
 </snippets>

@@ -1,31 +1,45 @@
-<snippets filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" license="GPL v2" namespace="" authors="github.com/Stolz" name="Laravel View">
+<snippets name="Laravel View" authors="github.com/Stolz" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" license="GPL v2" namespace="">
  <script></script>
  <item>
-  <match>view-make</match>
-  <fillin>View::make('${cursor}');</fillin>
+  <match>view</match>
+  <fillin>view('${cursor}');</fillin>
  </item>
  <item>
   <match>view-param</match>
-  <fillin>View::make('${view}', ['${var}' => ${cursor}]);</fillin>
+  <fillin>view('${view}', ['${var}' => ${cursor}]);</fillin>
  </item>
  <item>
   <match>view-with</match>
-  <fillin>View::make('${view}')->with('${var}', ${cursor});</fillin>
+  <fillin>view('${view}')->with('${var}', ${cursor});</fillin>
  </item>
  <item>
   <match>view-with-dynamic</match>
-  <fillin>View::make('${view}')->with${var/./\u\0/}(${cursor});</fillin>
+  <fillin>view('${view}')->with${var}(${cursor});</fillin>
  </item>
  <item>
   <match>view-share</match>
   <fillin>View::share('${var}', ${cursor});</fillin>
  </item>
  <item>
-  <match>view-nest</match>
-  <fillin>View::make('parent.view')->nest('raw', 'child.view');</fillin>
+  <match>view-exist</match>
+  <fillin>view()->exists('${cursor}')</fillin>
  </item>
  <item>
-  <match>view-nest-param</match>
-  <fillin>View::make('parent.view')->nest('raw', 'child.view', $data);</fillin>
+  <match>view-first</match>
+  <fillin>view()->first(['view.custom', 'view'], ['foo' => 'TODO']);</fillin>
+ </item>
+ <item>
+  <match>view-composer</match>
+  <fillin>View::composer('foo', 'App\Http\ViewComposers\FooComposer');</fillin>
+ </item>
+ <item>
+  <match>view-composer-closure</match>
+  <fillin>View::composer('foo', function ($view) {
+    ${cursor}
+});</fillin>
+ </item>
+ <item>
+  <match>view-composer-multiple</match>
+  <fillin>View::composer(['foo', 'var'], 'App\Http\ViewComposers\SomeComposer');</fillin>
  </item>
 </snippets>

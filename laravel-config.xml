@@ -16,4 +16,16 @@
   <match>config-has</match>
   <fillin>Config::has('${file}.${item}')</fillin>
  </item>
+ <item>
+  <match>config-get-helper</match>
+  <fillin>config('${file}.${item}')</fillin>
+ </item>
+ <item>
+  <match>config-get-fallback-helper</match>
+  <fillin>config('${file}.${item}', ${cursor})</fillin>
+ </item>
+ <item>
+  <match>config-set-helper</match>
+  <fillin>config(['${file}.${item}' => '${cursor}'])</fillin>
+ </item>
 </snippets>

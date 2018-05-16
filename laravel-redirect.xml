@@ -1,75 +1,99 @@
-<snippets filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" license="GPL v2" namespace="" authors="github.com/Stolz" name="Laravel Redirect">
+<snippets license="GPL v2" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" namespace="" name="Laravel Redirect" authors="github.com/Stolz">
  <script></script>
  <item>
   <match>redirect-back</match>
-  <fillin>Redirect::back();${cursor}</fillin>
+  <fillin>redirect()->back();</fillin>
+ </item>
+ <item>
+  <match>redirect-back-with-flash</match>
+  <fillin>redirect()->back()->with('status', 'Done!');</fillin>
  </item>
  <item>
   <match>redirect-back-with-input</match>
-  <fillin>Redirect::back()->withInput();</fillin>
+  <fillin>redirect()->back()->withInput();</fillin>
  </item>
  <item>
   <match>redirect-back-with-errors</match>
-  <fillin>Redirect::back()->withErrors($validator);</fillin>
+  <fillin>redirect()->back()->withErrors($validator);</fillin>
  </item>
  <item>
   <match>redirect-back-with-input-and-errors</match>
-  <fillin>Redirect::back()->withInput()->withErrors($validator);</fillin>
+  <fillin>redirect()->back()->withInput()->withErrors($validator);</fillin>
  </item>
  <item>
   <match>redirect-to</match>
-  <fillin>Redirect::to('${url}');${cursor}</fillin>
+  <fillin>redirect()->to('${url}');${cursor}</fillin>
+ </item>
+ <item>
+  <match>redirect-to-with-flash</match>
+  <fillin>redirect()->to('${url}')->with('status', 'Done!');</fillin>
  </item>
  <item>
   <match>redirect-to-with-input</match>
-  <fillin>Redirect::to('${url}')->withInput();</fillin>
+  <fillin>redirect()->to('${url}')->withInput();</fillin>
  </item>
  <item>
   <match>redirect-to-with-errors</match>
-  <fillin>Redirect::to('${url}')->withErrors($validator);</fillin>
+  <fillin>redirect()->to('${url}')->withErrors($validator);</fillin>
  </item>
  <item>
   <match>redirect-to-with-input-and-errors</match>
-  <fillin>Redirect::to('${url}')->withInput()->withErrors($validator);</fillin>
+  <fillin>redirect()->to('${url}')->withInput()->withErrors($validator);</fillin>
  </item>
  <item>
   <match>redirect-route</match>
-  <fillin>Redirect::route('${route}');${cursor}</fillin>
+  <fillin>redirect()->route('${route}');</fillin>
+ </item>
+ <item>
+  <match>redirect-route-with-flash</match>
+  <fillin>redirect()->route('${route}')->with('status', 'Done!');</fillin>
  </item>
  <item>
   <match>redirect-route-with-input</match>
-  <fillin>Redirect::route('${route}')->withInput();</fillin>
+  <fillin>redirect()->route('${route}')->withInput();</fillin>
  </item>
  <item>
   <match>redirect-route-with-errors</match>
-  <fillin>Redirect::route('${route}')->withErrors($validator);</fillin>
+  <fillin>redirect()->route('${route}')->withErrors($validator);</fillin>
  </item>
  <item>
   <match>redirect-route-with-input-and-errors</match>
-  <fillin>Redirect::route('${route}')->withInput()->withErrors($validator);</fillin>
+  <fillin>redirect()->route('${route}')->withInput()->withErrors($validator);</fillin>
  </item>
  <item>
   <match>redirect-route-param</match>
-  <fillin>Redirect::route('${route}', [${cursor}]);</fillin>
+  <fillin>redirect()->route('${route}', [${cursor}]);</fillin>
  </item>
  <item>
   <match>redirect-route-param-named</match>
-  <fillin>Redirect::route('${route}', ['key' => 'value']);</fillin>
+  <fillin>redirect()->route('${route}', ['key' => 'value']);</fillin>
  </item>
  <item>
   <match>redirect-action</match>
-  <fillin>Redirect::action('${name}Controller@${action}');</fillin>
+  <fillin>redirect()->action('${name}Controller@${action}');</fillin>
  </item>
  <item>
   <match>redirect-action-param</match>
-  <fillin>Redirect::action('${name}Controller@${action}', [${cursor}]);</fillin>
+  <fillin>redirect()->action('${name}Controller@${action}', [${cursor}]);</fillin>
  </item>
  <item>
   <match>redirect-action-param-named</match>
-  <fillin>Redirect::action('${name}Controller@${action}', ['key' => 'value']);</fillin>
+  <fillin>redirect()->action('${name}Controller@${action}', ['key' => 'value']);</fillin>
  </item>
  <item>
   <match>redirect-intended</match>
-  <fillin>Redirect::intended('${cursor}');</fillin>
+  <fillin>redirect()->intended('${cursor}');</fillin>
+ </item>
+ <item>
+  <match>redirect-with-flash</match>
+  <fillin>redirect('${cursor}')->with('status', 'Done!');</fillin>
+ </item>
+ <item>
+  <match>redirect-away</match>
+  <fillin>redirect()->away('https://www.google.com');</fillin>
+ </item>
+ <item>
+  <match>redirect-home</match>
+  <fillin>redirect()->home();</fillin>
  </item>
 </snippets>

@@ -1,39 +1,59 @@
-<snippets filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" license="GPL v2" namespace="" authors="github.com/Stolz" name="Laravel Path Helpers">
+<snippets authors="github.com/Stolz" namespace="" name="Laravel Path Helpers" license="GPL v2" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP">
  <script></script>
  <item>
   <match>app-path</match>
   <fillin>app_path()</fillin>
  </item>
  <item>
-  <match>public-path</match>
-  <fillin>public_path()</fillin>
+  <match>path-app</match>
+  <fillin>app_path()</fillin>
  </item>
  <item>
   <match>base-path</match>
   <fillin>base_path()</fillin>
  </item>
  <item>
-  <match>storage-path</match>
-  <fillin>storage_path()</fillin>
+  <match>path-base</match>
+  <fillin>base_path()</fillin>
  </item>
  <item>
-  <match>path-app</match>
-  <fillin>app_path()</fillin>
+  <match>config-path</match>
+  <fillin>config_path()</fillin>
+ </item>
+ <item>
+  <match>path-config</match>
+  <fillin>config_path()</fillin>
+ </item>
+ <item>
+  <match>database-path</match>
+  <fillin>database_path()</fillin>
+ </item>
+ <item>
+  <match>path-database</match>
+  <fillin>database_path()</fillin>
+ </item>
+ <item>
+  <match>public-path</match>
+  <fillin>public_path()</fillin>
  </item>
  <item>
   <match>path-public</match>
   <fillin>public_path()</fillin>
  </item>
  <item>
-  <match>path-base</match>
-  <fillin>base_path()</fillin>
+  <match>resource-path</match>
+  <fillin>resource_path()</fillin>
+ </item>
+ <item>
+  <match>path-resource</match>
+  <fillin>resource_path()</fillin>
+ </item>
+ <item>
+  <match>storage-path</match>
+  <fillin>storage_path()</fillin>
  </item>
  <item>
   <match>path-storage</match>
   <fillin>storage_path()</fillin>
- </item>
- <item>
-  <match>database-path</match>
-  <fillin>database_path()</fillin>
  </item>
 </snippets>

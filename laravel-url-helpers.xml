@@ -1,21 +1,5 @@
-<snippets filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" license="GPL v2" namespace="" authors="github.com/Stolz" name="Laravel URL Helpers">
+<snippets authors="github.com/Stolz" namespace="" name="Laravel URL Helpers" license="GPL v2" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP">
  <script></script>
- <item>
-  <match>link-to-url</match>
-  <fillin>link_to('${url}', $${title}, $attributes, $secure)</fillin>
- </item>
- <item>
-  <match>link-to-action</match>
-  <fillin>link_to_action('${Name}Controller@${method}', $${title}, $params, $attrs)</fillin>
- </item>
- <item>
-  <match>link-to-asset</match>
-  <fillin>link_to_asset('${url}', $${title}, $attributes, $secure)</fillin>
- </item>
- <item>
-  <match>link-to-route</match>
-  <fillin>link_to_route('${name}', $${title}, [$unamedParameter, 'namedParameter' => $namedParameter], ['id' => 'foo', 'class' => 'bar'])</fillin>
- </item>
  <item>
   <match>action-url</match>
   <fillin>action('${Name}Controller@${method}', $parameters)</fillin>
@@ -29,7 +13,7 @@
   <fillin>route($route, [$unamedParameter, 'namedParameter' => $namedParameter], $absolute = true)</fillin>
  </item>
  <item>
-  <match>secure-asset-url</match>
+  <match>asset-secure-url</match>
   <fillin>secure_asset('${url}', $${title}, $attributes)</fillin>
  </item>
  <item>
@@ -39,5 +23,9 @@
  <item>
   <match>url</match>
   <fillin>url('path', $parameters = [], $secure = null)</fillin>
+ </item>
+ <item>
+  <match>asset-url-version</match>
+  <fillin>mix('${cursor}')</fillin>
  </item>
 </snippets>

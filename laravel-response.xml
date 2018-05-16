@@ -1,4 +1,4 @@
-<snippets filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" license="GPL v2" namespace="" authors="github.com/Stolz" name="Laravel Response">
+<snippets license="GPL v2" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" namespace="" name="Laravel Response" authors="github.com/Stolz">
  <script></script>
  <item>
   <match>with</match>
@@ -6,7 +6,7 @@
  </item>
  <item>
   <match>with-dynamic</match>
-  <fillin>->with${var/./\u\0/}(${cursor});</fillin>
+  <fillin>->with${var}(${cursor});</fillin>
  </item>
  <item>
   <match>with-input</match>
@@ -21,39 +21,51 @@
   <fillin>->withErrors($validator);</fillin>
  </item>
  <item>
-  <match>response-make</match>
-  <fillin>$response = Response::make('${content}', $${statuscode});</fillin>
- </item>
- <item>
-  <match>response-make-header</match>
-  <fillin>$response = Response::make('${content}', $${statuscode});
-
-$response->header('Content-Type', $value);
-
-return $response</fillin>
- </item>
- <item>
   <match>response-json</match>
-  <fillin>Response::json(${cursor});</fillin>
+  <fillin>response()->json(${cursor});</fillin>
  </item>
  <item>
   <match>response-json-callback</match>
-  <fillin>Response::json(${cursor})->setCallback(Input::get('callback'));</fillin>
+  <fillin>response()->json(${cursor})->setCallback($request->input('callback'));</fillin>
  </item>
  <item>
   <match>response-download</match>
-  <fillin>Response::download('path/to/remote_name.jpg');</fillin>
+  <fillin>response()->download('path/to/file.jpg');</fillin>
  </item>
  <item>
   <match>response-download-name</match>
-  <fillin>esponse::download('path/to/remote_name.jpg', 'local_name.jpg');</fillin>
+  <fillin>response()->download('path/to/file.jpg', 'avatar.jpg');</fillin>
  </item>
  <item>
   <match>response-download-name-header</match>
-  <fillin>Response::download('path/to/remote_name.jpg', 'local_name.jpg', ['header key' => $header_value]);</fillin>
+  <fillin>response()->download('path/to/file.jpg', 'avatar.jpg', ['Content-Type' => 'image/jpeg']);</fillin>
  </item>
  <item>
   <match>response-view</match>
-  <fillin>Response::view('view.file', ['some' => $parameter], $httpCode);</fillin>
+  <fillin>response()->view('view.file', ['some' => $parameter], $httpCode);</fillin>
+ </item>
+ <item>
+  <match>response</match>
+  <fillin>response('${cursor}');</fillin>
+ </item>
+ <item>
+  <match>response-header</match>
+  <fillin>response($content)->header('Content-Type', 'text/plain');</fillin>
+ </item>
+ <item>
+  <match>response-headers</match>
+  <fillin>response($content)->withHeaders(['Content-Type' => 'text/plain']);</fillin>
+ </item>
+ <item>
+  <match>response-status</match>
+  <fillin>response('${cursor}', 200)</fillin>
+ </item>
+ <item>
+  <match>response-file</match>
+  <fillin>response()->file('path/to/file.jpg');</fillin>
+ </item>
+ <item>
+  <match>response-file-headers</match>
+  <fillin>response()->file('path/to/file.jpg', ['Content-Type' => 'image/jpeg']);</fillin>
  </item>
 </snippets>

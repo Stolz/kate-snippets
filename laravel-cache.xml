@@ -1,15 +1,15 @@
-<snippets filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" license="LGPL v2+" namespace="" authors="github.com/Stolz" name="Laravel Cache">
+<snippets namespace="" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" authors="github.com/Stolz" license="LGPL v2+" name="Laravel Cache">
  <script></script>
  <item>
   <match>cache-remember</match>
   <fillin>Cache::remember('key', $minutes, function() {
-	return 'value';
+    return 'value';
 })</fillin>
  </item>
  <item>
   <match>cache-remember-forever</match>
   <fillin>Cache::rememberForever('key', function() {
-	return 'value';
+    return 'value';
 })
 </fillin>
  </item>
@@ -19,7 +19,7 @@
  </item>
  <item>
   <match>cache-add-carbon</match>
-  <fillin>Cache::put('key', 'value', Carbon::now()->addMinutes(10))</fillin>
+  <fillin>Cache::put('key', 'value', now()->addMinutes(10))</fillin>
  </item>
  <item>
   <match>cache-add-if-doesnt-exist</match>
@@ -44,7 +44,7 @@
  <item>
   <match>cache-get-fallback-closure</match>
   <fillin>Cache::get('key', function() {
-	return 'default';
+    return 'default';
 })</fillin>
  </item>
  <item>
@@ -82,5 +82,17 @@
  <item>
   <match>cache-tag-flush</match>
   <fillin>Cache::tags('tag1', 'tag2')->flush()</fillin>
+ </item>
+ <item>
+  <match>cache-get-helper</match>
+  <fillin>cache('key')</fillin>
+ </item>
+ <item>
+  <match>cache-add-helper</match>
+  <fillin>cache(['key' => 'value'], $minutes)</fillin>
+ </item>
+ <item>
+  <match>cache-add-carbon-helper</match>
+  <fillin>cache(['key' => 'value'], now()->addMinutes(10))</fillin>
  </item>
 </snippets>

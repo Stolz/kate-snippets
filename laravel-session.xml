@@ -1,47 +1,67 @@
-<snippets filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" license="GPL v2" namespace="" authors="github.com/Stolz" name="Laravel Session">
+<snippets authors="github.com/Stolz" namespace="" name="Laravel Session" license="GPL v2" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP">
  <script></script>
  <item>
   <match>session-get</match>
-  <fillin>Session::get('${cursor}')</fillin>
+  <fillin>$request->session()->get('${cursor}')</fillin>
+ </item>
+ <item>
+  <match>session-get-helper</match>
+  <fillin>session('${cursor}')</fillin>
  </item>
  <item>
   <match>session-get-fallback</match>
-  <fillin>Session::get('${key}', ${value})</fillin>
+  <fillin>$request->session()->get('${key}', ${default})</fillin>
  </item>
  <item>
-  <match>session-set</match>
-  <fillin>Session::put('${key}', ${value})</fillin>
+  <match>session-get-fallback-helper</match>
+  <fillin>session('${key}', ${default})</fillin>
+ </item>
+ <item>
+  <match>session-get-and-delete</match>
+  <fillin>$request->session()->pull('${key}', 'defaultIfNotFound)</fillin>
  </item>
  <item>
   <match>session-has</match>
-  <fillin>Session::has('${cursor}')</fillin>
+  <fillin>$request->session()->has('${cursor}')</fillin>
+ </item>
+ <item>
+  <match>session-exists</match>
+  <fillin>$request->session()->exists('${cursor}')</fillin>
  </item>
  <item>
   <match>session-put</match>
-  <fillin>Session::put('${key}', ${value})</fillin>
+  <fillin>$request->session()->put('${key}', ${value})</fillin>
+ </item>
+ <item>
+  <match>session-put-helper</match>
+  <fillin>session(['${key}' => ${value}])</fillin>
  </item>
  <item>
   <match>session-all</match>
-  <fillin>Session::all()</fillin>
+  <fillin>$request->session()->all()</fillin>
  </item>
  <item>
   <match>session-forget</match>
-  <fillin>Session::forget('${cursor}')</fillin>
+  <fillin>$request->session()->forget('${key}')</fillin>
+ </item>
+ <item>
+  <match>session-push-to-array</match>
+  <fillin>$request->session()->push('${array}', 'value')</fillin>
  </item>
  <item>
   <match>session-flush</match>
-  <fillin>Session::flush()</fillin>
+  <fillin>$request->session()->flush()</fillin>
  </item>
  <item>
   <match>session-flash</match>
-  <fillin>Session::flash('${key}', ${value})</fillin>
+  <fillin>$request->session()->flash('${key}', ${value})</fillin>
  </item>
  <item>
   <match>session-reflash</match>
-  <fillin>Session::reflash()</fillin>
+  <fillin>$request->session()->reflash()</fillin>
  </item>
  <item>
   <match>session-keep</match>
-  <fillin>Session::keep(['${cursor}'])</fillin>
+  <fillin>$request->session()->keep(['${cursor}'])</fillin>
  </item>
 </snippets>

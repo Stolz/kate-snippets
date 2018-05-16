@@ -1,4 +1,4 @@
-<snippets filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" license="GPL v2" namespace="" authors="github.com/Stolz" name="Laravel Validation">
+<snippets name="Laravel Validation" authors="github.com/Stolz" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" license="GPL v2" namespace="">
  <script></script>
  <item>
   <match>validator-make</match>
@@ -16,51 +16,13 @@
   <fillin>$validator->fails()</fillin>
  </item>
  <item>
-  <match>if-model-has-errors</match>
-  <fillin>if($model->hasErrors())</fillin>
+  <match>validate-request</match>
+  <fillin>$input = $request->validate([
+    'field' => 'rule|rule',
+]);</fillin>
  </item>
  <item>
-  <match>rule-all</match>
-  <fillin>accepted
-active_url
-after:YYYY-MM-DD
-before:YYYY-MM-DD
-alpha
-alpha_dash
-alpha_num
-between:1,10
-confirmed
-date
-date_format:YYYY-MM-DD
-different:fieldname
-email
-exists:table,column
-image
-in:foo,bar,baz
-not_in:foo,bar,baz
-integer
-numeric
-ip
-max:value
-min:value
-mimes:jpeg,png
-regex:/^[0-9]$/
-required
-required_if:field,value
-required_with:foo,bar,baz
-required_without:foo,bar,baz
-same:field
-size:value
-unique:table,column,except,idColumn
-url
-====== Custom ===================
-alpha_space
-alpha_dash_space
-alpha_num_space
-positive
-length
-max_length
-min_length
-</fillin>
+  <match>validator-make-redirect</match>
+  <fillin>$validator = Validator::make($input, $rules, $messages = []))->validate()</fillin>
  </item>
 </snippets>

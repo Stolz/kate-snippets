@@ -1,31 +1,51 @@
-<snippets filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" license="GPL v2" namespace="" authors="github.com/Stolz" name="Laravel Input">
+<snippets filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" name="Laravel Input" namespace="" authors="github.com/Stolz" license="GPL v2">
  <script></script>
  <item>
   <match>input-get</match>
-  <fillin>Input::get('${cursor}');</fillin>
+  <fillin>$request->input('${cursor}')</fillin>
  </item>
  <item>
   <match>input-get-fallback</match>
-  <fillin>Input::get('${key}', ${cursor});</fillin>
+  <fillin>$request->input('${key}', ${cursor})</fillin>
  </item>
  <item>
   <match>input-has</match>
-  <fillin>Input::has('${cursor}');</fillin>
+  <fillin>$request->has('${cursor}')</fillin>
  </item>
  <item>
   <match>input-all</match>
-  <fillin>Input::all();</fillin>
- </item>
- <item>
-  <match>input-only</match>
-  <fillin>Input::only('input1', 'input2');</fillin>
+  <fillin>$request->all()</fillin>
  </item>
  <item>
   <match>input-except</match>
-  <fillin>Input::except('${cursor}');</fillin>
+  <fillin>$request->except('${cursor}')</fillin>
  </item>
  <item>
-  <match>input-merge</match>
-  <fillin>Input::merge(${cursor});</fillin>
+  <match>input-except-multiple</match>
+  <fillin>$request->except('foo', 'bar')</fillin>
+ </item>
+ <item>
+  <match>input-except-array</match>
+  <fillin>$request->except(['${cursor}'])</fillin>
+ </item>
+ <item>
+  <match>input-only</match>
+  <fillin>$request->only('${cursor}')</fillin>
+ </item>
+ <item>
+  <match>input-only-multiple</match>
+  <fillin>$request->only('foo', 'bar')</fillin>
+ </item>
+ <item>
+  <match>input-only-array</match>
+  <fillin>$request->only(['${cursor}'])</fillin>
+ </item>
+ <item>
+  <match>input-has-all</match>
+  <fillin>$request->has(['foo', 'bar'])</fillin>
+ </item>
+ <item>
+  <match>input-get-old</match>
+  <fillin>$request->old('${cursor}')</fillin>
  </item>
 </snippets>

@@ -1,59 +1,40 @@
-<snippets filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" license="GPL v2" namespace="" authors="github.com/Stolz" name="Laravel Route">
+<snippets license="GPL v2" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" authors="github.com/Stolz" name="Laravel Route" namespace="">
  <script></script>
  <item>
-  <match>route</match>
+  <match>route-closure</match>
   <fillin>Route::${verb}('${url}', function() {
-	return ${cursor};
+    return ${cursor};
 });</fillin>
  </item>
  <item>
-  <match>route-name</match>
-  <fillin>Route::${verb}('${url}', ['as' => '${name}', function() {
-	${cursor}
-}]);
-</fillin>
+  <match>route-closure-name</match>
+  <fillin>Route::${verb}('${url}', function() {
+    return ${cursor};
+})->name('${name}');</fillin>
  </item>
  <item>
-  <match>route-param</match>
+  <match>route-closure-param</match>
   <fillin>Route::${verb}('${url}/{${param}}', function($${param}) {
-	return ${cursor};
+    return ${cursor};
 });</fillin>
  </item>
  <item>
-  <match>route-param-optional</match>
-  <fillin>Route::${verb}('${url}/{${param}?}', function($${param} = NULL) {
-	return ${cursor};
+  <match>route-closure-param-optional</match>
+  <fillin>Route::${verb}('${url}/{${param}?}', function($${param} = null) {
+    return ${cursor};
 });</fillin>
  </item>
  <item>
-  <match>route-param-optional-with-fallback</match>
-  <fillin>Route::${verb}('${url}/{${param}?}', function($${param} = ${value}) {
-	return ${cursor};
-});</fillin>
+  <match>route-closure-param-regex</match>
+  <fillin>Route::${verb}('${url}/{${param}}', function($${param}) {
+    return ${cursor};
+})->where('${param}', '[A-Za-z]+');</fillin>
  </item>
  <item>
-  <match>route-param-regex-integer</match>
-  <fillin>Route::${verb}('${url}/{${number}}', function($${number}) {
-	return ${cursor};
-})->where('${number}', '[0-9]+');</fillin>
- </item>
- <item>
-  <match>route-param-regex-string</match>
-  <fillin>Route::${verb}('${url}/{${string}}', function($${string}) {
-	return ${cursor};
-})->where('${string}', '[A-Za-z]+');</fillin>
- </item>
- <item>
-  <match>route-param-regex-integer-string</match>
+  <match>route-closure-params-regex</match>
   <fillin>Route::${verb}('${url}/{${integer}}/{${string}}', function($${integer}, $${string}) {
-	return ${cursor};
+    return ${cursor};
 })->where(['${integer}' => '[0-9]+', '${string}' => '[A-Za-z]+']);</fillin>
- </item>
- <item>
-  <match>route-param-wildcard</match>
-  <fillin>Route::${verb}('${url}/(:num)/(:any)/(:any?)', function($number, $any, $optional = NULL) {
-	return ${cursor};
-});</fillin>
  </item>
  <item>
   <match>route-controller</match>
@@ -61,53 +42,16 @@
  </item>
  <item>
   <match>route-controller-name</match>
-  <fillin>Route::${verb}('${url}', ['as' => '${name}', 'uses' => '${controller}Controller@${action}']);</fillin>
- </item>
- <item>
-  <match>route-controller-array</match>
-  <fillin>Route::${verb}('${url}', ['uses' => '${controller}Controller@${action}']);</fillin>
+  <fillin>Route::${verb}('${url}', '${controller}Controller@${action}')->name('${name}');</fillin>
  </item>
  <item>
   <match>route-controller-param</match>
   <fillin>Route::${verb}('${url}/{${param}}', '${controller}Controller@${action}');</fillin>
  </item>
  <item>
-  <match>route-controller-restful</match>
-  <fillin>Route::controller('${url}', '${controller}Controller');</fillin>
- </item>
- <item>
-  <match>route-middleware</match>
-  <fillin>Route::${verb}('${url}', [
-	'middleware' => '${name:parameter}',
-	function() {
-		return ${cursor};
-	}
-]);</fillin>
- </item>
- <item>
-  <match>route-middleware-wildcard</match>
-  <fillin>Route::when('${url}/*', '${middleware}');</fillin>
- </item>
- <item>
-  <match>route-middleware-wildcard-restrict-method</match>
-  <fillin>Route::when('${url}/*', '${middleware}', [${cursor}/* 'get', 'post', 'put', 'delete' */]);</fillin>
- </item>
- <item>
   <match>route-group</match>
-  <fillin>Route::group(['middleware' => '${middleware}'], function() {
-	${cursor}
-});</fillin>
- </item>
- <item>
-  <match>route-group-domain</match>
-  <fillin>Route::group(['domain' => '{subdomain}.myapp.com'], function() {
-	${cursor}
-});</fillin>
- </item>
- <item>
-  <match>route-group-prefix</match>
-  <fillin>Route::group(['prefix' => '${prefix}'], function() {
-	${cursor}
+  <fillin>Route::middleware(['first', 'second'])->domain('{${foo}}.myapp.com')->namespace('${foo}')->prefix('${foo}')->name('${foo}.')->group(function () {
+    ${cursor}
 });</fillin>
  </item>
  <item>
@@ -116,37 +60,71 @@
  </item>
  <item>
   <match>route-resource-only</match>
-  <fillin>Route::resource('${url}', '${controller}Controller', ['only' => [${cursor}/*'index', 'create', 'store', 'show', 'edit', 'update', 'destroy' */]]);
+  <fillin>Route::resource('${url}', '${controller}Controller')->only([${cursor}/*'index', 'create', 'store', 'show', 'edit', 'update', 'destroy' */]);
 </fillin>
  </item>
  <item>
   <match>route-resource-except</match>
-  <fillin>Route::resource('${url}', '${controller}Controller', ['except' => [${cursor}/*'index', 'create', 'store', 'show', 'edit', 'update', 'destroy' */]);
+  <fillin>Route::resource('${url}', '${controller}Controller')->except([${cursor}/*'index', 'create', 'store', 'show', 'edit', 'update', 'destroy' */]);
 </fillin>
  </item>
  <item>
-  <match>route-https-forced</match>
-  <fillin>Route::${verb}('${url}', ['https', function() {
-	${cursor}
-}]);</fillin>
+  <match>route-closure-https-forced</match>
+  <fillin>Route::${verb}('${url}', function() {
+    return ${cursor};
+})->attribute(0, 'https');</fillin>
  </item>
  <item>
   <match>route-bind-model</match>
-  <fillin>Route::model('${param}', '${model/./\u\0/}');
-Route::get('url/{${param}}', function(${model} $${param})
-{
-	${cursor}
-});</fillin>
+  <fillin>Route::model('${param}', App\Models\SomeModel::class);</fillin>
  </item>
  <item>
   <match>route-current</match>
   <fillin>Route::currentRouteName();</fillin>
  </item>
  <item>
-  <match>filter</match>
-  <fillin>Route::filter('${name}', function()
-{
-	return ${cursor};
+  <match>route-bind-model-custom</match>
+  <fillin>Route::bind('${param}', function ($id) {
+    return $modelRepository->findById($id) ?? abort(404, _("Model with id '$id' not found"));
 });</fillin>
+ </item>
+ <item>
+  <match>route-redirect</match>
+  <fillin>Route::redirect('/from', '/to', 301);</fillin>
+ </item>
+ <item>
+  <match>route-view</match>
+  <fillin>Route::view('/url', 'view');</fillin>
+ </item>
+ <item>
+  <match>route-view-param</match>
+  <fillin>Route::view('/url', 'view', ['param' => 'Value']);</fillin>
+ </item>
+ <item>
+  <match>route-resource-api</match>
+  <fillin>Route::apiResource('${url}', '${controller}Controller');</fillin>
+ </item>
+ <item>
+  <match>route-resource-api-except</match>
+  <fillin>Route::apiResource('${url}', '${controller}Controller')->except([${cursor}/*'index', 'store', 'show', 'update', 'destroy' */]);
+</fillin>
+ </item>
+ <item>
+  <match>route-resource-api-only</match>
+  <fillin>Route::apiResource('${url}', '${controller}Controller')->only([${cursor}/*'index', 'store', 'show', 'update', 'destroy' */]);</fillin>
+ </item>
+ <item>
+  <match>route-resources</match>
+  <fillin>Route::resources([
+    'user' => 'UserController',
+    'posts' => 'PostController'
+]);</fillin>
+ </item>
+ <item>
+  <match>route-resources-api</match>
+  <fillin>Route::apiResources([
+    'user' => 'UserController',
+    'posts' => 'PostController'
+]);</fillin>
  </item>
 </snippets>

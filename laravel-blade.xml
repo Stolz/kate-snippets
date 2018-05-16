@@ -1,4 +1,4 @@
-<snippets filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" license="GPL v2" namespace="" authors="github.com/Stolz" name="Laravel Blade">
+<snippets namespace="" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" authors="github.com/Stolz" license="GPL v2" name="Laravel Blade">
  <script></script>
  <item>
   <match>@include</match>
@@ -17,37 +17,31 @@
   <fillin>@yield('${cursor}', 'default')</fillin>
  </item>
  <item>
-  <match>@section-layout</match>
+  <match>@section-define</match>
   <fillin>@section('${section}')
 ${cursor}
 @show</fillin>
  </item>
  <item>
-  <match>@section-view</match>
+  <match>@section</match>
   <fillin>@section('${section}')
 ${cursor}
-@stop</fillin>
+@endsection</fillin>
  </item>
  <item>
-  <match>@section-view-parent</match>
+  <match>@section-append-parent</match>
   <fillin>@section('${section}')
 @parent
 ${cursor}
-@stop</fillin>
- </item>
- <item>
-  <match>@section-view-overwrite</match>
-  <fillin>@section('${section}')
-${cursor}
-@overwrite</fillin>
+@endsection</fillin>
  </item>
  <item>
   <match>blade</match>
   <fillin>{{ ${cursor} }}</fillin>
  </item>
  <item>
-  <match>blade-escaped</match>
-  <fillin>{{{ ${cursor} }}}</fillin>
+  <match>blade-raw</match>
+  <fillin>{!! ${cursor} !!}</fillin>
  </item>
  <item>
   <match>@extends</match>
@@ -55,13 +49,13 @@ ${cursor}
  </item>
  <item>
   <match>@if</match>
-  <fillin>@if (${cursor})
+  <fillin>@if(${cursor})
 
 @endif</fillin>
  </item>
  <item>
   <match>@if-else</match>
-  <fillin>@if (${cursor})
+  <fillin>@if(${cursor})
 
 @else
 
@@ -69,25 +63,155 @@ ${cursor}
  </item>
  <item>
   <match>@for</match>
-  <fillin>@for ($i = 0; $i &lt; 10; $i++)
+  <fillin>@for($i = 0; $i &lt; 10; $i++)
 ${cursor}
 @endfor</fillin>
  </item>
  <item>
   <match>@foreach</match>
-  <fillin>@foreach (${cursor} as )
+  <fillin>@foreach(${cursor} as )
 
 @endforeach
 </fillin>
  </item>
  <item>
   <match>@while</match>
-  <fillin>@while (${cursor})
+  <fillin>@while(${cursor})
 
 @endwhile</fillin>
  </item>
  <item>
   <match>@include-data</match>
-  <fillin>@include('${cursor}', ['some'=>'data'])</fillin>
+  <fillin>@include('${cursor}', ['some' => 'data'])</fillin>
+ </item>
+ <item>
+  <match>@section-inline-content</match>
+  <fillin>@section('${section}', 'Some inline content')</fillin>
+ </item>
+ <item>
+  <match>@json</match>
+  <fillin>@json(${cursor})</fillin>
+ </item>
+ <item>
+  <match>blade-vue</match>
+  <fillin>@{{ ${cursor} }}</fillin>
+ </item>
+ <item>
+  <match>@verbatim</match>
+  <fillin>@verbatim
+{{ ${cursor} }}
+@endverbatim</fillin>
+ </item>
+ <item>
+  <match>@if-elseif</match>
+  <fillin>@if(${cursor})
+
+@elseif()
+
+@else
+
+@endif</fillin>
+ </item>
+ <item>
+  <match>@isset</match>
+  <fillin>@isset(${cursor})
+
+@endisset</fillin>
+ </item>
+ <item>
+  <match>@empty</match>
+  <fillin>@empty(${cursor})
+
+@endempty</fillin>
+ </item>
+ <item>
+  <match>@auth</match>
+  <fillin>@auth
+${cursor}
+@endauth</fillin>
+ </item>
+ <item>
+  <match>@guest</match>
+  <fillin>@guest
+${cursor}
+@endguest</fillin>
+ </item>
+ <item>
+  <match>@auth-guard</match>
+  <fillin>@auth('${guard}')
+${cursor}
+@endauth</fillin>
+ </item>
+ <item>
+  <match>@guest-guard</match>
+  <fillin>@guest('${guard}')
+${cursor}
+@endguest</fillin>
+ </item>
+ <item>
+  <match>@hasSection</match>
+  <fillin>@hasSection('${cursor}')
+
+@endif</fillin>
+ </item>
+ <item>
+  <match>@switch</match>
+  <fillin>@switch(${cursor})
+    @case(1)
+        @break
+
+    @case(2)
+        @break
+
+    @default
+
+@endswitch</fillin>
+ </item>
+ <item>
+  <match>@forelse</match>
+  <fillin>@forelse(${cursor} as )
+
+@empty
+
+@endforelse
+</fillin>
+ </item>
+ <item>
+  <match>@foreach-continue</match>
+  <fillin>@foreach(${cursor} as )
+    @continue($condition)
+@endforeach
+</fillin>
+ </item>
+ <item>
+  <match>@foreach-break</match>
+  <fillin>@foreach(${cursor} as )
+    @break($condition)
+@endforeach
+</fillin>
+ </item>
+ <item>
+  <match>blade-comment</match>
+  <fillin>{{-- comment --}}</fillin>
+ </item>
+ <item>
+  <match>@stack</match>
+  <fillin>@stack('${cursor}')</fillin>
+ </item>
+ <item>
+  <match>@push</match>
+  <fillin>@push('${cursor}')
+
+@endpush</fillin>
+ </item>
+ <item>
+  <match>@prepend</match>
+  <fillin>@prepend('${cursor}')
+
+@endprepend</fillin>
+ </item>
+ <item>
+  <match>@injec</match>
+  <fillin>@inject('${cursor}', 'App\Foo\SomeService')</fillin>
  </item>
 </snippets>
