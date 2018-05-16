@@ -1,233 +1,152 @@
-<snippets namespace="" license="GPL v2" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" authors="github.com/Stolz" name="Laravel Route">
+<snippets filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" license="GPL v2" namespace="" authors="github.com/Stolz" name="Laravel Route">
  <script></script>
  <item>
-  <displayprefix></displayprefix>
   <match>route</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::%{verb}('%{url}', function() {
-	return %{cursor};
+  <fillin>Route::${verb}('${url}', function() {
+	return ${cursor};
 });</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-name</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::%{verb}('%{url}', ['as' => '%{name}', function() {
-	%{cursor}
+  <fillin>Route::${verb}('${url}', ['as' => '${name}', function() {
+	${cursor}
 }]);
 </fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-param</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::%{verb}('%{url}/{%{param}}', function($%{param}) {
-	return %{cursor};
+  <fillin>Route::${verb}('${url}/{${param}}', function($${param}) {
+	return ${cursor};
 });</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-param-optional</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::%{verb}('%{url}/{%{param}?}', function($%{param} = NULL) {
-	return %{cursor};
+  <fillin>Route::${verb}('${url}/{${param}?}', function($${param} = NULL) {
+	return ${cursor};
 });</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-param-optional-with-fallback</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::%{verb}('%{url}/{%{param}?}', function($%{param} = %{value}) {
-	return %{cursor};
+  <fillin>Route::${verb}('${url}/{${param}?}', function($${param} = ${value}) {
+	return ${cursor};
 });</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-param-regex-integer</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::%{verb}('%{url}/{%{number}}', function($%{number}) {
-	return %{cursor};
-})->where('%{number}', '[0-9]+');</fillin>
+  <fillin>Route::${verb}('${url}/{${number}}', function($${number}) {
+	return ${cursor};
+})->where('${number}', '[0-9]+');</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-param-regex-string</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::%{verb}('%{url}/{%{string}}', function($%{string}) {
-	return %{cursor};
-})->where('%{string}', '[A-Za-z]+');</fillin>
+  <fillin>Route::${verb}('${url}/{${string}}', function($${string}) {
+	return ${cursor};
+})->where('${string}', '[A-Za-z]+');</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-param-regex-integer-string</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::%{verb}('%{url}/{%{integer}}/{%{string}}', function($%{integer}, $%{string}) {
-	return %{cursor};
-})->where(['%{integer}' => '[0-9]+', '%{string}' => '[A-Za-z]+']);</fillin>
+  <fillin>Route::${verb}('${url}/{${integer}}/{${string}}', function($${integer}, $${string}) {
+	return ${cursor};
+})->where(['${integer}' => '[0-9]+', '${string}' => '[A-Za-z]+']);</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-param-wildcard</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::%{verb}('%{url}/(:num)/(:any)/(:any?)', function($number, $any, $optional = NULL) {
-	return %{cursor};
+  <fillin>Route::${verb}('${url}/(:num)/(:any)/(:any?)', function($number, $any, $optional = NULL) {
+	return ${cursor};
 });</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-controller</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::%{verb}('%{url}', '%{controller}Controller@%{action}');</fillin>
+  <fillin>Route::${verb}('${url}', '${controller}Controller@${action}');</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-controller-name</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::%{verb}('%{url}', ['as' => '%{name}', 'uses' => '%{controller}Controller@%{action}']);</fillin>
+  <fillin>Route::${verb}('${url}', ['as' => '${name}', 'uses' => '${controller}Controller@${action}']);</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-controller-array</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::%{verb}('%{url}', ['uses' => '%{controller}Controller@%{action}']);</fillin>
+  <fillin>Route::${verb}('${url}', ['uses' => '${controller}Controller@${action}']);</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-controller-param</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::%{verb}('%{url}/{%{param}}', '%{controller}Controller@%{action}');</fillin>
+  <fillin>Route::${verb}('${url}/{${param}}', '${controller}Controller@${action}');</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-controller-restful</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::controller('%{url}', '%{controller}Controller');</fillin>
+  <fillin>Route::controller('${url}', '${controller}Controller');</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-middleware</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::%{verb}('%{url}', [
-	'middleware' => '%{name:parameter}',
+  <fillin>Route::${verb}('${url}', [
+	'middleware' => '${name:parameter}',
 	function() {
-		return %{cursor};
+		return ${cursor};
 	}
 ]);</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-middleware-wildcard</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::when('%{url}/*', '%{middleware}');</fillin>
+  <fillin>Route::when('${url}/*', '${middleware}');</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-middleware-wildcard-restrict-method</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::when('%{url}/*', '%{middleware}', [%{cursor}/* 'get', 'post', 'put', 'delete' */]);</fillin>
+  <fillin>Route::when('${url}/*', '${middleware}', [${cursor}/* 'get', 'post', 'put', 'delete' */]);</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-group</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::group(['middleware' => '%{middleware}'], function() {
-	%{cursor}
+  <fillin>Route::group(['middleware' => '${middleware}'], function() {
+	${cursor}
 });</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-group-domain</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
   <fillin>Route::group(['domain' => '{subdomain}.myapp.com'], function() {
-	%{cursor}
+	${cursor}
 });</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-group-prefix</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::group(['prefix' => '%{prefix}'], function() {
-	%{cursor}
+  <fillin>Route::group(['prefix' => '${prefix}'], function() {
+	${cursor}
 });</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-resource</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::resource('%{url}', '%{controller}Controller');</fillin>
+  <fillin>Route::resource('${url}', '${controller}Controller');</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-resource-only</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::resource('%{url}', '%{controller}Controller', ['only' => [%{cursor}/*'index', 'create', 'store', 'show', 'edit', 'update', 'destroy' */]]);
+  <fillin>Route::resource('${url}', '${controller}Controller', ['only' => [${cursor}/*'index', 'create', 'store', 'show', 'edit', 'update', 'destroy' */]]);
 </fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-resource-except</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::resource('%{url}', '%{controller}Controller', ['except' => [%{cursor}/*'index', 'create', 'store', 'show', 'edit', 'update', 'destroy' */]);
+  <fillin>Route::resource('${url}', '${controller}Controller', ['except' => [${cursor}/*'index', 'create', 'store', 'show', 'edit', 'update', 'destroy' */]);
 </fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-https-forced</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::%{verb}('%{url}', ['https', function() {
-	%{cursor}
+  <fillin>Route::${verb}('${url}', ['https', function() {
+	${cursor}
 }]);</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-bind-model</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Route::model('%{param}', '%{model/./\u\0/}');
-Route::get('url/{%{param}}', function(%{model} $%{param})
+  <fillin>Route::model('${param}', '${model/./\u\0/}');
+Route::get('url/{${param}}', function(${model} $${param})
 {
-	%{cursor}
+	${cursor}
 });</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-current</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
   <fillin>Route::currentRouteName();</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>filter</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
   <fillin>Route::filter('${name}', function()
 {
-	return %{cursor};
+	return ${cursor};
 });</fillin>
  </item>
 </snippets>

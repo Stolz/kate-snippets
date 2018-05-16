@@ -1,129 +1,75 @@
-<snippets namespace="" license="GPL v2" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" authors="github.com/Stolz" name="Laravel Redirect">
+<snippets filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" license="GPL v2" namespace="" authors="github.com/Stolz" name="Laravel Redirect">
  <script></script>
-  <item>
-  <displayprefix></displayprefix>
+ <item>
   <match>redirect-back</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Redirect::back();%{cursor}</fillin>
+  <fillin>Redirect::back();${cursor}</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>redirect-back-with-input</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
   <fillin>Redirect::back()->withInput();</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>redirect-back-with-errors</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
   <fillin>Redirect::back()->withErrors($validator);</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>redirect-back-with-input-and-errors</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
   <fillin>Redirect::back()->withInput()->withErrors($validator);</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>redirect-to</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Redirect::to('%{url}');%{cursor}</fillin>
+  <fillin>Redirect::to('${url}');${cursor}</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>redirect-to-with-input</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Redirect::to('%{url}')->withInput();</fillin>
+  <fillin>Redirect::to('${url}')->withInput();</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>redirect-to-with-errors</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Redirect::to('%{url}')->withErrors($validator);</fillin>
+  <fillin>Redirect::to('${url}')->withErrors($validator);</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>redirect-to-with-input-and-errors</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Redirect::to('%{url}')->withInput()->withErrors($validator);</fillin>
+  <fillin>Redirect::to('${url}')->withInput()->withErrors($validator);</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>redirect-route</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Redirect::route('%{route}');%{cursor}</fillin>
+  <fillin>Redirect::route('${route}');${cursor}</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>redirect-route-with-input</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Redirect::route('%{route}')->withInput();</fillin>
+  <fillin>Redirect::route('${route}')->withInput();</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>redirect-route-with-errors</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Redirect::route('%{route}')->withErrors($validator);</fillin>
+  <fillin>Redirect::route('${route}')->withErrors($validator);</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>redirect-route-with-input-and-errors</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Redirect::route('%{route}')->withInput()->withErrors($validator);</fillin>
+  <fillin>Redirect::route('${route}')->withInput()->withErrors($validator);</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>redirect-route-param</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Redirect::route('%{route}', [%{cursor}]);</fillin>
+  <fillin>Redirect::route('${route}', [${cursor}]);</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>redirect-route-param-named</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Redirect::route('%{route}', ['key' => 'value']);</fillin>
+  <fillin>Redirect::route('${route}', ['key' => 'value']);</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>redirect-action</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Redirect::action('%{name}Controller@%{action}');</fillin>
+  <fillin>Redirect::action('${name}Controller@${action}');</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>redirect-action-param</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Redirect::action('%{name}Controller@%{action}', [%{cursor}]);</fillin>
+  <fillin>Redirect::action('${name}Controller@${action}', [${cursor}]);</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>redirect-action-param-named</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Redirect::action('%{name}Controller@%{action}', ['key' => 'value']);</fillin>
+  <fillin>Redirect::action('${name}Controller@${action}', ['key' => 'value']);</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>redirect-intended</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>Redirect::intended('%{cursor}');</fillin>
+  <fillin>Redirect::intended('${cursor}');</fillin>
  </item>
 </snippets>

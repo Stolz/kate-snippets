@@ -2,7 +2,7 @@
 
 El plugin [Snippets de KATE](http://www.kde.org/applications/utilities/kate/) permite añadir fragmentos de código fuente reutilizable para ahorrar algo de tiempo.
 
-Cuando creamos un repositorio de snippets indicamos para qué tipo de ficheros se aplica (.c, .txt, .php, .sql,...). Para que se aplique a cualquier tipo de fichero basta con indicar un asterisco (*). En caso de quere compartir nuestros snipets quedan guardados en `~/.kde4/share/apps/ktexteditor_snippets/data/`.
+Cuando creamos un repositorio de snippets indicamos para qué tipo de ficheros se aplica (.c, .txt, .php, .sql,...). Para que se aplique a cualquier tipo de fichero basta con indicar un asterisco (*). En caso de quere compartir nuestros snipets quedan guardados en `~/.local/share/ktexteditor_snippets/data`.
 
 Se puede invocar al plugin de varias formas:
 
@@ -11,7 +11,7 @@ Se puede invocar al plugin de varias formas:
 - Al escribir, si tecleamos un fragmento de texto que coincide con el nombre de un snippet el plugin se invoca automáticamente ofreciendo todos los snippets del tipo de fichero actual cuyo nombre concuerda con el fragmento de texto escrito.
 - Se puede asignar una copmbianción de teclas a cada snippet.
 
-Para indicar una variable (parte del snippet editable por el usuario) usar la sintaxis `${variable}` ó `%{variable}`. Tras insertar un snippet el cursor se posiciona automáticamente en la primera variable. Presionando `TABULADOR` pasamos a la siguiente variable. Una vez que el usuario rellena una variable todas las demás ocurrencias de dicha variable son reemplazadas automáticamente. Al presiona `ESC` el cursor se posiciona en la posición en la que insertemos la variable especial `${cursor}`. Para acceder al texto seleccionado usar la variable especial `${selection}`.
+Para indicar una variable (parte del snippet editable por el usuario) usar la sintaxis `${variable}`. Tras insertar un snippet el cursor se posiciona automáticamente en la primera variable. Presionando `TABULADOR` pasamos a la siguiente variable. Una vez que el usuario rellena una variable todas las demás ocurrencias de dicha variable son reemplazadas automáticamente. Al presiona `ESC` el cursor se posiciona en la posición en la que insertemos la variable especial `${cursor}`. Para acceder al texto seleccionado usar la variable especial `${selection}`.
 
 
 
@@ -54,9 +54,9 @@ El plugin soporta QtScript
 Ejemplo de funciones:
 
 	function testit(src) {
-			debug("HELLO I'm a script");
-			return "HELLO I'm a script. Text is:"+src+" I'm done";
+		debug("HELLO I'm a script");
+		return "HELLO I'm a script. Text is:"+src+" I'm done";
 	}
 	function getFileName(src) {
-			return document.fileName();
+		return document.fileName();
 	}

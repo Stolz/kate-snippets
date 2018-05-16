@@ -1,73 +1,43 @@
-<snippets namespace="" license="GPL v2" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" authors="github.com/Stolz" name="Laravel URL Helpers">
+<snippets filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" license="GPL v2" namespace="" authors="github.com/Stolz" name="Laravel URL Helpers">
  <script></script>
  <item>
-  <displayprefix></displayprefix>
   <match>link-to-url</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>link_to('%{url}', $%{title}, $attributes, $secure)</fillin>
+  <fillin>link_to('${url}', $${title}, $attributes, $secure)</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>link-to-action</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>link_to_action('%{Name}Controller@%{method}', $%{title}, $params, $attrs)</fillin>
+  <fillin>link_to_action('${Name}Controller@${method}', $${title}, $params, $attrs)</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>link-to-asset</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>link_to_asset('%{url}', $%{title}, $attributes, $secure)</fillin>
+  <fillin>link_to_asset('${url}', $${title}, $attributes, $secure)</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>link-to-route</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>link_to_route('%{name}', $%{title}, [$unamedParameter, 'namedParameter' => $namedParameter], ['id' => 'foo', 'class' => 'bar'])</fillin>
+  <fillin>link_to_route('${name}', $${title}, [$unamedParameter, 'namedParameter' => $namedParameter], ['id' => 'foo', 'class' => 'bar'])</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>action-url</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>action('%{Name}Controller@%{method}', $parameters)</fillin>
+  <fillin>action('${Name}Controller@${method}', $parameters)</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>asset-url</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>asset('%{url}', $%{title}, $attributes)</fillin>
+  <fillin>asset('${url}', $${title}, $attributes)</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>route-url</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
   <fillin>route($route, [$unamedParameter, 'namedParameter' => $namedParameter], $absolute = true)</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>secure-asset-url</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>secure_asset('%{url}', $%{title}, $attributes)</fillin>
+  <fillin>secure_asset('${url}', $${title}, $attributes)</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>secure-url</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
   <fillin>secure_url('path', $parameters)</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>url</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
   <fillin>url('path', $parameters = [], $secure = null)</fillin>
  </item>
 </snippets>

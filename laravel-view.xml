@@ -1,52 +1,31 @@
-<snippets namespace="" license="GPL v2" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" authors="github.com/Stolz" name="Laravel View">
+<snippets filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" license="GPL v2" namespace="" authors="github.com/Stolz" name="Laravel View">
  <script></script>
  <item>
-  <displayprefix></displayprefix>
   <match>view-make</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>View::make('%{cursor}');</fillin>
+  <fillin>View::make('${cursor}');</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>view-param</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>View::make('%{view}', ['%{var}' => %{cursor}]);</fillin>
+  <fillin>View::make('${view}', ['${var}' => ${cursor}]);</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>view-with</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>View::make('%{view}')->with('%{var}', %{cursor});</fillin>
+  <fillin>View::make('${view}')->with('${var}', ${cursor});</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>view-with-dynamic</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>View::make('%{view}')->with%{var/./\u\0/}(%{cursor});</fillin>
+  <fillin>View::make('${view}')->with${var/./\u\0/}(${cursor});</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>view-share</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>View::share('%{var}', %{cursor});</fillin>
+  <fillin>View::share('${var}', ${cursor});</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>view-nest</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
   <fillin>View::make('parent.view')->nest('raw', 'child.view');</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>view-nest-param</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
   <fillin>View::make('parent.view')->nest('raw', 'child.view', $data);</fillin>
  </item>
 </snippets>

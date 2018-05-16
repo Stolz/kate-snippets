@@ -1,41 +1,26 @@
-<snippets namespace="" license="GPL v2" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" authors="github.com/Stolz" name="Laravel Validation">
+<snippets filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" license="GPL v2" namespace="" authors="github.com/Stolz" name="Laravel Validation">
  <script></script>
  <item>
-  <displayprefix></displayprefix>
   <match>validator-make</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
   <fillin>$validator = Validator::make($input, $rules, $messages = []));</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>validator-set-attribute-names</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
   <fillin>$validator->setAttributeNames([
-	%{cursor}
+	${cursor}
 ]);
 </fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>validator-fails</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
   <fillin>$validator->fails()</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>if-model-has-errors</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
   <fillin>if($model->hasErrors())</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>rule-all</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
   <fillin>accepted
 active_url
 after:YYYY-MM-DD

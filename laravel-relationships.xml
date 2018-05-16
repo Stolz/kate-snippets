@@ -1,70 +1,52 @@
-<snippets namespace="" license="GPL v2" filetypes="PHP/PHP;PHP (HTML)" authors="github.com/Stolz" name="Laravel Relationships">
+<snippets filetypes="PHP/PHP;PHP (HTML)" license="GPL v2" namespace="" authors="github.com/Stolz" name="Laravel Relationships">
  <script></script>
  <item>
-  <displayprefix></displayprefix>
   <match>rel-1-1</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>public function %{model}()
+  <fillin>public function ${model}()
 {
-	return $this->hasOne('App\\%{model/./\u\0/}');
+	return $this->hasOne('App\\${model/./\u\0/}');
 }
-%{cursor}</fillin>
+${cursor}</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>rel-1-1-has-foreign</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>public function %{model}()
+  <fillin>public function ${model}()
 {
-	return $this->belongsTo('App\\%{model/./\u\0/}');
+	return $this->belongsTo('App\\${model/./\u\0/}');
 }
-%{cursor}</fillin>
+${cursor}</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>rel-1-N-one</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>public function %{model}()
+  <fillin>public function ${model}()
 {
-	return $this->belongsTo('App\\%{model/./\u\0/}');
+	return $this->belongsTo('App\\${model/./\u\0/}');
 }
-%{cursor}</fillin>
+${cursor}</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>rel-1-N-many</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>public function %{model}s()
+  <fillin>public function ${model}s()
 {
-	return $this->hasMany('App\\%{model/./\u\0/}');
+	return $this->hasMany('App\\${model/./\u\0/}');
 }
-%{cursor}</fillin>
+${cursor}</fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>rel-N-M</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>public function %{model}s()
+  <fillin>public function ${model}s()
 {
-	return $this->belongsToMany('App\\%{model/./\u\0/}')%{cursor}->withPivot('foo', 'bar')->withTimestamps();
+	return $this->belongsToMany('App\\${model/./\u\0/}')${cursor}->withPivot('foo', 'bar')->withTimestamps();
 }
 </fillin>
  </item>
  <item>
-  <displayprefix></displayprefix>
   <match>rel-many-through</match>
-  <displaypostfix></displaypostfix>
-  <displayarguments></displayarguments>
-  <fillin>public function %{model}s()
+  <fillin>public function ${model}s()
 {
-	return $this->hasManyThrough('App\\%{model/./\u\0/}', 'App\\%{through/./\u\0/}');
+	return $this->hasManyThrough('App\\${model/./\u\0/}', 'App\\${through/./\u\0/}');
 }
-%{cursor}
+${cursor}
 </fillin>
  </item>
 </snippets>
