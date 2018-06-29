@@ -214,4 +214,10 @@ ${cursor}
   <match>@injec</match>
   <fillin>@inject('${cursor}', 'App\Foo\SomeService')</fillin>
  </item>
+ <item>
+  <match>@can</match>
+  <fillin>@can('', ${cursor})
+
+@endcan</fillin>
+ </item>
 </snippets>
