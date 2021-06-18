@@ -1,4 +1,4 @@
-<snippets filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" namespace="" name="PHP Common" authors="github.com/Stolz" license="GPL v2">
+<snippets license="GPL v2" name="PHP Common" filetypes="PHP/PHP;PHP (HTML);JavaScript/PHP;CSS/PHP" namespace="" authors="github.com/Stolz">
  <script></script>
  <item>
   <match>class</match>
@@ -165,5 +165,9 @@ public function ${name}($param): TODO
  <item>
   <match>static</match>
   <fillin>static::</fillin>
+ </item>
+ <item>
+  <match>dd</match>
+  <fillin>dd(__METHOD__, ${cursor}); // TODO remove</fillin>
  </item>
 </snippets>

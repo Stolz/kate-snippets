@@ -1,0 +1,144 @@
+<snippets filetypes="Go" name="Go" license="LGPL v2+" authors="Stolz" namespace="">
+ <script></script>
+ <item>
+  <match>package-main</match>
+  <fillin>package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	fmt.Println("main")
+	${cursor}
+}
+</fillin>
+ </item>
+ <item>
+  <match>package-main-init</match>
+  <fillin>package main
+
+import (
+	"fmt"
+)
+
+func init() {
+	fmt.Println("init")
+}
+
+func main() {
+	fmt.Println("main")
+	${cursor}
+}
+</fillin>
+ </item>
+ <item>
+  <match>channel-unbuffer-bidirectional</match>
+  <fillin>ch := make(chan int)</fillin>
+ </item>
+ <item>
+  <match>channel-unbuffer-send-only</match>
+  <fillin>ch := make(chan&lt;- int)</fillin>
+ </item>
+ <item>
+  <match>channel-unbuffer-receive-only</match>
+  <fillin>ch := make(&lt;-chan int)</fillin>
+ </item>
+ <item>
+  <match>channel-buffer-bidirectional</match>
+  <fillin>ch := make(chan int, 100)</fillin>
+ </item>
+ <item>
+  <match>channel-buffer-send-only</match>
+  <fillin>ch := make(chan&lt;- int, 100)</fillin>
+ </item>
+ <item>
+  <match>channel-buffer-receive-only</match>
+  <fillin>ch := make(&lt;-chan int, 100)</fillin>
+ </item>
+ <item>
+  <match>channel-send</match>
+  <fillin>ch &lt;- 42</fillin>
+ </item>
+ <item>
+  <match>channel-receive</match>
+  <fillin>v := &lt;-ch</fillin>
+ </item>
+ <item>
+  <match>channel-receive-until-closed</match>
+  <fillin>for v := range ch {
+	${cursor}
+}</fillin>
+ </item>
+ <item>
+  <match>channel-receive-and-test-closed</match>
+  <fillin>v, chStillOpen := &lt;-ch</fillin>
+ </item>
+ <item>
+  <match>channel-close</match>
+  <fillin>close(ch)</fillin>
+ </item>
+ <item>
+  <match>loop-for</match>
+  <fillin>for i := 0; i &lt; 5; i++ {
+	${cursor}
+}</fillin>
+ </item>
+ <item>
+  <match>loop-foreach</match>
+  <fillin>for indexOrKey, value := range someArrayOrSliceOrMap {
+	${cursor}
+}</fillin>
+ </item>
+ <item>
+  <match>loop-while</match>
+  <fillin>i := 0
+for i &lt; 5 {
+	i++${cursor}
+}</fillin>
+ </item>
+ <item>
+  <match>if-error</match>
+  <fillin>if err != nil {
+	return${cursor}
+}</fillin>
+ </item>
+ <item>
+  <match>gorutine-closure</match>
+  <fillin>go func() {
+	${cursor}
+}()</fillin>
+ </item>
+ <item>
+  <match>if-statement</match>
+  <fillin>if _, err := function(); err != nil {
+	${cursor}
+}</fillin>
+ </item>
+ <item>
+  <match>log-fatal</match>
+  <fillin>log.WithField("foo", bar).WithError(err).Fatal("[XXX] Message")</fillin>
+ </item>
+ <item>
+  <match>log-error</match>
+  <fillin>log.WithField("foo", bar).WithError(err).Error("[XXX] Message")</fillin>
+ </item>
+ <item>
+  <match>log-warning</match>
+  <fillin>log.WithField("foo", bar).Warn("[XXX] Message")</fillin>
+ </item>
+ <item>
+  <match>log-debug</match>
+  <fillin>log.WithField("foo", bar).Debug("[XXX] Message")</fillin>
+ </item>
+ <item>
+  <match>log-info</match>
+  <fillin>log.WithField("foo", bar).Info("[XXX] Message")</fillin>
+ </item>
+ <item>
+  <match>function</match>
+  <fillin>func function() error {
+	${cursor}return fmt.Errorf("Function '%s' not implemented", "TODO")
+}</fillin>
+ </item>
+</snippets>
